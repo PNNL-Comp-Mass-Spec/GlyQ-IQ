@@ -1,0 +1,4 @@
+Hexose,3,12
+NAcetylhexosamine,2,8
+Deoxyhexose,0,7
+NeuraminicAcid,0,9

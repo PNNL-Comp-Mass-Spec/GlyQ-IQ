@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WorkflowParameters>
+  <AlignmentInfoFolder>E:\ScottK\IQ\RunFiles\AllignmentInfo</AlignmentInfoFolder>
+  <CopyRawFileLocal>false</CopyRawFileLocal>
+  <DeleteLocalDatasetAfterProcessing>false</DeleteLocalDatasetAfterProcessing>
+  <FileContainingDatasetPaths>\\protoapps\UserData\Slysz\Standard_Testing\Targeted_FeatureFinding\QCShew_OrbiStandard_FileReference.txt</FileContainingDatasetPaths>
+  <FolderPathForCopiedRawDataset>E:\ScottK\IQ\RunFiles\CopyFolder</FolderPathForCopiedRawDataset>
+  <LoggingFolder>E:\ScottK\IQ\RunFiles\Logs</LoggingFolder>
+  <TargetsUsedForAlignmentFilePath></TargetsUsedForAlignmentFilePath>
+  <TargetsFilePath>E:\ScottK\IQ\RunFiles\Gly09_Velos3_Jaguar_230nL30_C15_SN123_3X_01Jan13_R8_resultsSK_vIQ HM SNx1 Man9.txt</TargetsFilePath>
+  <ResultsFolder>E:\ScottK\IQ\Results</ResultsFolder>
+  <TargetedAlignmentIsPerformed>false</TargetedAlignmentIsPerformed>
+  <TargetedAlignmentWorkflowParameterFile>E:\ScottK\IQ\RunFiles\TargetedAlignmentWorkflowParameters2.xml</TargetedAlignmentWorkflowParameterFile>
+  <WorkflowParameterFile>E:\ScottK\IQ\RunFiles\BasicTargetedWorkflowParameters2.xml</WorkflowParameterFile>
+  <WorkflowType>BasicTargetedWorkflowExecutor</WorkflowType>
+</WorkflowParameters>

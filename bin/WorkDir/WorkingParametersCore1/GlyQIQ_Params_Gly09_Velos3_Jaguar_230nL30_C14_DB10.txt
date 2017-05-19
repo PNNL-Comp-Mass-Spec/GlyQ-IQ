@@ -1,0 +1,8 @@
+ResultsFolderPath,C:\Temp\WorkDir\Results
+LoggingFolderPath,C:\Temp\WorkDir\Results
+FactorsFile,Factors_L10.txt
+ExecutorParameterFile,ExecutorParametersSK.xml
+XYDataFolder,XYDataWriter
+WorkflowParametersFile,FragmentedParameters_Velos_7ppm_DH.txt
+Alignment,C:\Temp\WorkDir\WorkingParametersCore1\AlignmentParameters.xml
+BasicTargetedParameters,C:\Temp\WorkDir\WorkingParametersCore1\BasicTargetedWorkflowParameters.xml

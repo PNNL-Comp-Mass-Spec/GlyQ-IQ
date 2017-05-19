@@ -1,0 +1,20 @@
+# Number of scans to sum (must be an odd number)
+ScansToSum=5
+
+# If True then use the Hammer detector, otherwise use DeconTools
+UseHammer=false
+
+HammerMode=1
+
+# DeconTools peak to background ratio
+PeakToBackgroundRatio=2
+
+# DeconTools signal to noise threshold
+SignalToNoiseThreshold=1.3
+
+# Process MS/MS spectra
+
+ProcessMSMS=false
+
+IsDataThresholdedAndNoiseFloorRemoved=false
+

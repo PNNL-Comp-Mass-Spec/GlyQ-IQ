@@ -1,0 +1,1 @@
+C:\GlyQ-IQ\IQGlyQ_Console.exe "C:\Temp\WorkDir" "Gly09_Velos3_Jaguar_230nL30_C14_DB10" "raw" "L_13_Alditol_No_PSA_Part1.txt" "GlyQIQ_Params_Gly09_Velos3_Jaguar_230nL30_C14_DB10.txt" "C:\Temp\WorkDir\WorkingParametersCore1" "Lock_1" "C:\Temp\WorkDir\Results" "1"
