@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BF35DBAF-85C7-4671-8839-3B152B79C5DA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DivideTargetsLibrary</RootNamespace>
+    <AssemblyName>DivideTargetsLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>U:\DLL_Files\Fast_DLL\X86 DivideTargetsLibrary\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>U:\DLL_Files\Fast_DLL\X86 DivideTargetsLibrary\X86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IQ2, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\X86 IQ\X86\IQ2.dll</HintPath>
+    </Reference>
+    <Reference Include="PNNLOmics">
+      <HintPath>..\..\X86 Run\X86\PNNLOmics.dll</HintPath>
+    </Reference>
+    <Reference Include="Run32">
+      <HintPath>..\..\X86 Run\X86\Run32.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppExecuteObject.cs" />
+    <Compile Include="Combine\CombineParameters.cs" />
+    <Compile Include="Combine\DataHolderForSort.cs" />
+    <Compile Include="Combine\ResultsFiles.cs" />
+    <Compile Include="Converter.cs" />
+    <Compile Include="DataFileSetupForMultipleCopies.cs" />
+    <Compile Include="DeleteDirectoryWrapper.cs" />
+    <Compile Include="DivideTargetsFile.cs" />
+    <Compile Include="Parameters\HPCPrepParameters.cs" />
+    <Compile Include="LoadParameters.cs" />
+    <Compile Include="Parameters\ParameterDivideTargets.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringLoadTextFileLine.cs" />
+    <Compile Include="TargetToString.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GetPeaksDllLite\GetPeaksDllLite.csproj">
+      <Project>{BDD751D2-12FB-4004-AA8E-F7083A33AD10}</Project>
+      <Name>GetPeaksDllLite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ParalellTargetsLibrary\ParalellTargetsLibrary.csproj">
+      <Project>{5564BF28-80EE-43A6-8E81-553EB5C7EF19}</Project>
+      <Name>ParalellTargetsLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy $(TargetName).* "$(SolutionDir)..\X86 DivideTargetsLibrary\X86\Release"
+copy GetPeaksDllLite.* "$(SolutionDir)..\X86 DivideTargetsLibrary\X86\Release"
+copy IQ2.* "$(SolutionDir)\..\X86 DivideTargetsLibrary\X86\Release"
+copy ParalellTargetsLibrary.* "$(SolutionDir)\..\X86 DivideTargetsLibrary\X86\Release"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
