@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6C95FB76-B4D1-40AF-B7C3-C7FE88C8BB06}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Run32</RootNamespace>
+    <AssemblyName>Run32</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NO_BRUKER_EDAL</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="agtsampleinforw, Version=3.0.134.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\X86 DeconTools Net 4\x86\Release\agtsampleinforw.dll</HintPath>
+    </Reference>
+    <Reference Include="alglibnet2, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\X86 Algilib\alglibnet2.dll</HintPath>
+    </Reference>
+    <Reference Include="BaseCommon, Version=6.0.633.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\X86 DeconTools Net 4\x86\Release\BaseCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="BaseDataAccess, Version=6.0.633.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\X86 DeconTools Net 4\x86\Release\BaseDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="BaseError, Version=6.0.633.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\X86 DeconTools Net 4\x86\Release\BaseError.dll</HintPath>
+    </Reference>
+    <Reference Include="BaseTof, Version=1.0.4686.24703, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\X86 DeconTools Net 4\x86\Release\BaseTof.dll</HintPath>
+    </Reference>
+    <Reference Include="BrukerDataReader, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\X86 DeconTools Net 4\x86\Release\BrukerDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="DeconEngineV2, Version=1.0.4408.30259, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\X86 DeconTools Net 4\x86\Release\DeconEngineV2.dll</HintPath>
+    </Reference>
+    <Reference Include="MassSpecDataReader, Version=6.0.633.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\X86 DeconTools Net 4\x86\Release\MassSpecDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics, Version=2.1.2.21, Culture=neutral, PublicKeyToken=cd8b63ad3d691a37, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\X86 MathNet\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="PNNLOmics">
+      <HintPath>..\..\..\X86 PNNL Omics\PNNLOmics.dll</HintPath>
+    </Reference>
+    <Reference Include="ProteowizardWrapper, Version=1.0.4533.16341, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\X86 DeconTools Net 4\x86\Release\ProteowizardWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Backend\Core\ChromCorrelationData.cs" />
+    <Compile Include="Backend\Core\ChromCorrelationDataItem.cs" />
+    <Compile Include="Backend\Core\ChromPeak.cs" />
+    <Compile Include="Backend\Core\ChromPeakQualityData.cs" />
+    <Compile Include="Backend\Core\IsotopicProfile.cs" />
+    <Compile Include="Backend\Core\MSPeak.cs" />
+    <Compile Include="Backend\Core\MSPeakResult.cs" />
+    <Compile Include="Backend\Core\Peak.cs" />
+    <Compile Include="Backend\Core\ResultCollection.cs" />
+    <Compile Include="Backend\Core\ResultFlag.cs" />
+    <Compile Include="Backend\Core\Results\DeuteratedTargetedResultObject.cs" />
+    <Compile Include="Backend\Core\Results\IsosResult.cs" />
+    <Compile Include="Backend\Core\Results\MassTagResult.cs" />
+    <Compile Include="Backend\Core\Results\N14N15_TResult.cs" />
+    <Compile Include="Backend\Core\Results\O16O18TargetedResultObject.cs" />
+    <Compile Include="Backend\Core\Results\StandardIsosResult.cs" />
+    <Compile Include="Backend\Core\Results\TargetedResultBase.cs" />
+    <Compile Include="Backend\Core\Results\TopDownTargetedResult.cs" />
+    <Compile Include="Backend\Core\Run.cs" />
+    <Compile Include="Backend\Core\ScanNETPair.cs" />
+    <Compile Include="Backend\Core\ScanResult.cs" />
+    <Compile Include="Backend\Core\ScanSet.cs" />
+    <Compile Include="Backend\Core\ScanSetCollection.cs" />
+    <Compile Include="Backend\Core\ScanSetFactory.cs" />
+    <Compile Include="Backend\Core\TargetBase.cs" />
+    <Compile Include="Backend\Data\XYData.cs" />
+    <Compile Include="Backend\DTO\MSPeakResult.cs" />
+    <Compile Include="Backend\FileIO\AcqusFileReader.cs" />
+    <Compile Include="Backend\Globals.cs" />
+    <Compile Include="Backend\Runs\AgilentDRun.cs" />
+    <Compile Include="Backend\Runs\BrukerRun.cs" />
+    <Compile Include="Backend\Runs\BrukerTOF.cs" />
+    <Compile Include="Backend\Runs\BrukerV2Run.cs" />
+    <Compile Include="Backend\Runs\BrukerV3Run.cs" />
+    <Compile Include="Backend\Runs\CalibrationData\BrukerCalibrationData.cs" />
+    <Compile Include="Backend\Runs\CalibrationData\CalibrationDataBase.cs" />
+    <Compile Include="Backend\Runs\ConcreteXYDataRun.cs" />
+    <Compile Include="Backend\Runs\DeconToolsRun.cs" />
+    <Compile Include="Backend\Runs\ICR2LSRun.cs" />
+    <Compile Include="Backend\Runs\IMFRun.cs" />
+    <Compile Include="Backend\Runs\MSScanFromTextFileRun.cs" />
+    <Compile Include="Backend\Runs\MzRun.cs" />
+    <Compile Include="Backend\Runs\MZXMLRun.cs" />
+    <Compile Include="Backend\Runs\MzxmlV2Run.cs" />
+    <Compile Include="Backend\Runs\RunFactory.cs" />
+    <Compile Include="Backend\Runs\XCaliburRun.cs" />
+    <Compile Include="Backend\Runs\XCaliburRun2.cs" />
+    <Compile Include="Backend\Runs\XYDataRun.cs" />
+    <Compile Include="HelloWorld.cs" />
+    <Compile Include="Utilities\RunUtilities.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\DesignByContract.cs" />
+    <Compile Include="Utilities\DiagnosticUtilities.cs" />
+    <Compile Include="Utilities\EmpiricalFormulaUtilities.cs" />
+    <Compile Include="Utilities\IsotopicProfileUtilities.cs" />
+    <Compile Include="Utilities\MathUtils.cs" />
+    <Compile Include="Utilities\PeakUtilities.cs" />
+    <Compile Include="Utilities\PeptideUtils.cs" />
+    <Compile Include="Utilities\TheorXYDataCalculationUtilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="MSFileReaderLib">
+      <Guid>{F0C5F3E3-4F2A-443E-A74D-0AABE3237494}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy $(TargetName).* "$(SolutionDir)..\..\X86 Run\X86"
+xcopy *.dll "$(SolutionDir)..\..\X86 Run\X86" /D /Y
+xcopy *.pdb "$(SolutionDir)..\..\X86 Run\X86" /D /Y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
