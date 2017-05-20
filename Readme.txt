@@ -41,6 +41,7 @@ The IQGlyQ_Console.exe program requires several input files, including:
 
 The first step is to create the Peaks.txt file using HammerOrDeconSimplePeakDetector.exe
 which you can find at bin\DeconPeakDetector
+To retrieve the required DLLs, run batch file _GetDLLs.bat in that directory
 
 This file contains peak lists for each mass spectrum, i.e. the mass and intensity values 
 for each isotopic species above a computed noise threshold.
@@ -48,7 +49,6 @@ for each isotopic species above a computed noise threshold.
 The program syntax is:
 
 HammerOrDeconSimplePeakDetector.exe Dataset.raw /P:ParameterFile.txt /O:OutputFolderPath
-
 
 The default parameter file is HPC_SpinExactive_PeakDetector_Parameters.txt
 which you can find at bin\ParameterFiles\PeakDetection
@@ -119,6 +119,8 @@ It is probably best to include all of the double quotes on these parameters,
 even if they don't have spaces.  For an example command line with full paths, 
 see file bin\WorkDir\StartProgram_Core1.bat
 
+For a second example, see bin\ExampleData\StartProgram_Core1.bat 
+and the releated files in that directory.
 
 == Results File ==
 
