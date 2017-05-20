@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7C6FD1F2-891A-4D1C-BA06-8EF62BD291CF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IQGlyQ</RootNamespace>
+    <AssemblyName>IQGlyQ</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\Fast DLL\X86 IQGlyQ\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accord">
+      <HintPath>U:\DLL_Files\Fast_DLL\X86 Accord\Accord.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.MachineLearning">
+      <HintPath>U:\DLL_Files\Fast_DLL\X86 Accord\Accord.MachineLearning.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Math">
+      <HintPath>U:\DLL_Files\Fast_DLL\X86 Accord\Accord.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Statistics">
+      <HintPath>U:\DLL_Files\Fast_DLL\X86 Accord\Accord.Statistics.dll</HintPath>
+    </Reference>
+    <Reference Include="alglibnet2, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>U:\DLL_Files\Fast_DLL\X86 Algilib\alglibnet2.dll</HintPath>
+    </Reference>
+    <Reference Include="DeconEngineV2, Version=1.0.4408.30259, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>U:\DLL_Files\Fast_DLL\X86 DeconTools Net 4\x86\Release\DeconEngineV2.dll</HintPath>
+    </Reference>
+    <Reference Include="DeconTools.Backend, Version=1.0.4877.27159, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>U:\DLL_Files\Fast_DLL\X86 DeconTools Net 4\x86\Release\DeconTools.Backend.dll</HintPath>
+    </Reference>
+    <Reference Include="DeconTools.Workflows, Version=1.0.4877.27163, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>U:\DLL_Files\Fast_DLL\X86 DeconToolsWorkflows\x86\Release\DeconTools.Workflows.dll</HintPath>
+    </Reference>
+    <Reference Include="DivideTargetsLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>U:\DLL_Files\Fast_DLL\X86 DivideTargetsLibrary\Release\DivideTargetsLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="HammerPeakDetector, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>U:\DLL_Files\Fast_DLL\X86 HammerPeakDetector\Release\HammerPeakDetector.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>U:\DLL_Files\Fast_DLL\X86 HammerPeakDetector\Release\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics">
+      <HintPath>U:\DLL_Files\Fast_DLL\X86 MathNet\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="MoreLinq">
+      <HintPath>U:\DLL_Files\Fast_DLL\X86 More LINQ\MoreLinq.dll</HintPath>
+    </Reference>
+    <Reference Include="MultiAlignEngine, Version=1.0.4170.28111, Culture=neutral, processorArchitecture=x86" />
+    <Reference Include="MultiDimensionalPeakFinding">
+      <HintPath>U:\DLL_Files\Fast_DLL\X86 3D FeatureFinding\x86\Release\MultiDimensionalPeakFinding.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.5.5.10112, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>U:\DLL_Files\Fast_DLL\X86 NUnit Framework\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="OrbitrapPeakDetection, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>U:\DLL_Files\Fast_DLL\X86 OrbitrapPeakDetection\OrbitrapPeakDetection.dll</HintPath>
+    </Reference>
+    <Reference Include="PNNLOmics, Version=1.0.5018.26511, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\PNNL CSharp1\SVN PNNL Omics\PNNLOmics HPC\development\trunk\PNNLOmics\bin\AnyCPU\Debug\PNNLOmics.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIMFLibrary, Version=2.0.4888.23003, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>U:\DLL_Files\Fast_DLL\X86 UIMF Library\x86\Release\UIMFLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="YAFMS-DB-X86">
+      <HintPath>U:\DLL_Files\Fast_DLL\X86 YAFMSDB\X86\YAFMS-DB-X86.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BasicDeuteratedQuantifier.cs" />
+    <Compile Include="BasicMultiTargetedWorkflowExecutor.cs" />
+    <Compile Include="CorrelatePeakShapes.cs" />
+    <Compile Include="CorrelateWorkflow.cs" />
+    <Compile Include="Enumerations\EnumerationCurveType.cs" />
+    <Compile Include="Enumerations\EnumerationDataset.cs" />
+    <Compile Include="Enumerations\EnumerationFinalDecision.cs" />
+    <Compile Include="Enumerations\EnumerationIsotopePenaltyMode.cs" />
+    <Compile Include="Enumerations\EnumerationIsotopicProfileMode.cs" />
+    <Compile Include="Enumerations\EnumerationIsPic.cs" />
+    <Compile Include="FIFO\GlyQIqResult.cs" />
+    <Compile Include="FIFO\ImportGlyQResult.cs" />
+    <Compile Include="FragmentedTargetedPeakProcessingParameters.cs" />
+    <Compile Include="Functions\AddMonoSaccharide.cs" />
+    <Compile Include="Functions\CalibrateMS.cs" />
+    <Compile Include="Functions\ConvertFactorToIQTargets.cs" />
+    <Compile Include="Functions\IterativelyFindMSFeatureWrapper.cs" />
+    <Compile Include="Functions\TargetCalibration.cs" />
+    <Compile Include="FIFO\GlycoGridWrite.cs" />
+    <Compile Include="Objects\CorrelationObject.cs" />
+    <Compile Include="DeuteratedQuantifierTask.cs" />
+    <Compile Include="DeuteratedTargetedWorkflow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DeuteratedTargetedWorkflowImporter.cs" />
+    <Compile Include="DeuteratedTargetedWorkflowParameters.cs" />
+    <Compile Include="DeuteratedTargetedWorkflowExecutorParameters.cs" />
+    <Compile Include="Enumerations\EnumerationError.cs" />
+    <Compile Include="Executor\GlyQIQExecutor.cs" />
+    <Compile Include="Exporter\InSourceFragmentExporter.cs" />
+    <Compile Include="Functions\ChangeRange.cs" />
+    <Compile Include="Functions\CurveFit.cs" />
+    <Compile Include="IQTasks\IqDeuteratedParameter.cs" />
+    <Compile Include="IQTasks\IqDeuteratedQuantifierTask.cs" />
+    <Compile Include="IQTasks\IqTask.cs" />
+    <Compile Include="Objects\ChromPeakDetectorParameters.cs" />
+    <Compile Include="Objects\ChromPeakGeneratorParameters.cs" />
+    <Compile Include="Objects\IsotopeParameters.cs" />
+    <Compile Include="Objects\ParametersIQGlyQ.cs" />
+    <Compile Include="Objects\MSGeneratorParameters.cs" />
+    <Compile Include="Objects\SavitskyGolaySmootherParameters.cs" />
+    <Compile Include="Objects\ScanCharacteristics.cs" />
+    <Compile Include="Objects\ScanObject.cs" />
+    <Compile Include="Processors\BaseProcessor.cs" />
+    <Compile Include="Processors\EnumerationMassSpectraProcessing.cs" />
+    <Compile Include="Processors\ProcessingParameters.cs" />
+    <Compile Include="Processors\ProcessingParametersChromatogram.cs" />
+    <Compile Include="Processors\EnumerationChromatogramProcessing.cs" />
+    <Compile Include="Processors\ProcessingParametersMassSpectra.cs" />
+    <Compile Include="Processors\ProcessorChromatogram.cs" />
+    <Compile Include="Processors\ProcessorMassSpectra.cs" />
+    <Compile Include="ProcessTarget.cs" />
+    <Compile Include="SelectClosest.cs" />
+    <Compile Include="TargetGenerators\EnumerationParentOrChild.cs" />
+    <Compile Include="Tasks\IsotopicPeakFitScoreCalculatorSK.cs" />
+    <Compile Include="Tasks\PeakLeastSquaresFitterSK.cs" />
+    <Compile Include="TypeOfResult.cs" />
+    <Compile Include="UnitTesting\FitScoreIsotopeProfileCount.cs" />
+    <Compile Include="UnitTesting\GlycanCodeConversion_UnitTest.cs" />
+    <Compile Include="UnitTesting\GlycoGridConversionUnitTest.cs" />
+    <Compile Include="UnitTesting\Import_UnitTest.cs" />
+    <Compile Include="UnitTesting\IQ_FullDataset_Test.cs" />
+    <Compile Include="UnitTesting\IQ_UnitTest_SetStrings.cs" />
+    <Compile Include="UnitTesting\Joe Unit Test.cs" />
+    <Compile Include="UnitTesting\LoadPeaksForHammer.cs" />
+    <Compile Include="UnitTesting\YAFMS-DB_UnitTestsIQ.cs" />
+    <Compile Include="Workflows\FragmentedAboveBelowParentIQWorkflow.cs" />
+    <Compile Include="Workflows\FragmentedParentIQWorkflow.cs" />
+    <Compile Include="Workflows\FragmentedTargetedIQWorkflow.cs" />
+    <Compile Include="FragmentedTargetedWorkflowParameters.cs" />
+    <Compile Include="FragmenterTargetedWorkflowImporter.cs" />
+    <Compile Include="FragmentIQTarget.cs" />
+    <Compile Include="Results\FragmentResultsObject.cs" />
+    <Compile Include="GausianFit.cs" />
+    <Compile Include="GaussianFitText.cs" />
+    <Compile Include="TargetGenerators\GenerateListOfCandidateParents.cs" />
+    <Compile Include="Results\IqGlyQResult.cs" />
+    <Compile Include="UnitTesting\IQ_UnitTests.cs" />
+    <Compile Include="KDESmooth.cs" />
+    <Compile Include="LBalg1.cs" />
+    <Compile Include="LevenburgMarquardt.cs" />
+    <Compile Include="MixtureModelFX.cs" />
+    <Compile Include="MixtureModelTests.cs" />
+    <Compile Include="MultiTargetedResultRepository.cs" />
+    <Compile Include="MultiTargetedWorkflowExecutor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tasks\ConvertResultToChildren.cs" />
+    <Compile Include="Tasks\RemoveInsourceFragmentationIQ.cs" />
+    <Compile Include="UnitTesting\IQGlyQTestingUtilities.cs" />
+    <Compile Include="UnitTesting\ModuleTesting.cs" />
+    <Compile Include="Utiliites.cs" />
+    <Compile Include="RunMeIQGlyQ.cs" />
+    <Compile Include="SimplePeakCorrelator.cs" />
+    <Compile Include="VerifyByTargetedFeatureFinding.cs" />
+    <Compile Include="Workflows\ParentIQWorkflowWithChargeCorrelation.cs" />
+    <Compile Include="Workflows\WorkflowUtilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PNNLOmicsElementData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GetPeaks DLL\GetPeaks DLL.csproj">
+      <Project>{821336B6-6A28-49FD-B6A0-CD7DA49E11D6}</Project>
+      <Name>GetPeaks DLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GetPeaks.UnitTests\GetPeaks.UnitTests.csproj">
+      <Project>{4B3249CA-24C6-4B2D-9C95-2B42738CAAA2}</Project>
+      <Name>GetPeaks.UnitTests</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
