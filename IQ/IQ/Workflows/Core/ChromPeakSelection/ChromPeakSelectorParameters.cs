@@ -1,0 +1,75 @@
+﻿
+using Run32.Backend;
+
+namespace IQ.Workflows.Core.ChromPeakSelection
+{
+    
+
+
+    public class ChromPeakSelectorParameters
+    {
+
+        #region Constructors
+        public ChromPeakSelectorParameters()
+        {
+            NumScansToSum = 1;
+            NETTolerance = 0.05f;
+            PeakSelectorMode = Globals.PeakSelectorMode.MostIntense;
+            SummingMode = GlobalsWorkFlow.SummingModeEnum.SUMMINGMODE_STATIC;
+            MaxScansSummedInDynamicSumming = 20;
+            AreaOfPeakToSumInDynamicSumming = 2.0;
+        }
+
+        public ChromPeakSelectorParameters(ChromPeakSelectorParameters parameters)
+            : this()
+        {
+            NumScansToSum = parameters.NumScansToSum;
+            NETTolerance = parameters.NETTolerance;
+            PeakSelectorMode = parameters.PeakSelectorMode;
+            SummingMode = parameters.SummingMode;
+            MaxScansSummedInDynamicSumming = parameters.MaxScansSummedInDynamicSumming;
+            AreaOfPeakToSumInDynamicSumming = parameters.AreaOfPeakToSumInDynamicSumming;
+        }
+
+
+        #endregion
+
+        #region Properties
+        
+        
+        /// <summary>
+        /// Number of MS scans to sum after the Chrom peak has been selected
+        /// </summary>
+        public int NumScansToSum { get; set; }
+
+        public float NETTolerance { get; set; }
+
+        public Globals.PeakSelectorMode PeakSelectorMode { get; set; }
+
+
+        /// <summary>
+        /// Summing mode. Static indicates that the number of scans summed is always the same. Dynamic indicates that the number of scans summed is variable
+        /// </summary>
+        public GlobalsWorkFlow.SummingModeEnum SummingMode { get; set; }
+
+
+        public int MaxScansSummedInDynamicSumming { get; set; }
+
+        /// <summary>
+        /// Area of peak to sum, based on units of sigma. Eg a value of '2' means +/- 2 sigma; thus 4 sigma or ~ 95% of a gaussian peak will be summed
+        /// </summary>
+        public double AreaOfPeakToSumInDynamicSumming { get; set; }
+
+
+        #endregion
+
+        #region Public Methods
+
+        #endregion
+
+        #region Private Methods
+
+        #endregion
+
+    }
+}
