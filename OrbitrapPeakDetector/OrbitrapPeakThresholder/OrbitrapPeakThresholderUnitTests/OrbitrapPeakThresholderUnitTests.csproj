@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{74E0D114-90E4-4AB6-94E3-4B63192CCD8D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OrbitrapPeakThresholderUnitTests</RootNamespace>
+    <AssemblyName>OrbitrapPeakThresholderUnitTests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DeconEngineV2">
+      <HintPath>..\Fast DLL\X86 DeconTools Net 4\X86 DeconTools\DeconEngineV2.dll</HintPath>
+    </Reference>
+    <Reference Include="DeconTools.Backend">
+      <HintPath>..\Fast DLL\X86 DeconTools Net 4\X86 DeconTools\DeconTools.Backend.dll</HintPath>
+    </Reference>
+    <Reference Include="GetPeaks DLL">
+      <HintPath>..\Fast DLL\X86 GetPeaksDLL\X86 GetPeaksDLL\GetPeaks DLL.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\Fast DLL\X86 Nunit\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="PNNLOmics">
+      <HintPath>..\Fast DLL\X86 PNNL Omics\PNNLOmics.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GetManualData.cs" />
+    <Compile Include="Enumerations\SpectraDataType.cs" />
+    <Compile Include="ManualData.cs" />
+    <Compile Include="ThresholdUnitTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Deisotoping\Deisotoping.csproj">
+      <Project>{01B6BD59-E0BB-4C0A-96B9-295410E23D48}</Project>
+      <Name>Deisotoping</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OrbitrapPeakThresholder\OrbitrapPeakThresholder.csproj">
+      <Project>{605846AA-D3E6-4D52-963D-1B99220585AF}</Project>
+      <Name>OrbitrapPeakThresholder</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

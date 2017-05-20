@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrbitrapPeakThresholder", "OrbitrapPeakThresholder\OrbitrapPeakThresholder.csproj", "{605846AA-D3E6-4D52-963D-1B99220585AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrbitrapPeakThresholderUnitTests", "OrbitrapPeakThresholderUnitTests\OrbitrapPeakThresholderUnitTests.csproj", "{74E0D114-90E4-4AB6-94E3-4B63192CCD8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deisotoping", "Deisotoping\Deisotoping.csproj", "{01B6BD59-E0BB-4C0A-96B9-295410E23D48}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{605846AA-D3E6-4D52-963D-1B99220585AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{605846AA-D3E6-4D52-963D-1B99220585AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{605846AA-D3E6-4D52-963D-1B99220585AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{605846AA-D3E6-4D52-963D-1B99220585AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74E0D114-90E4-4AB6-94E3-4B63192CCD8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74E0D114-90E4-4AB6-94E3-4B63192CCD8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74E0D114-90E4-4AB6-94E3-4B63192CCD8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74E0D114-90E4-4AB6-94E3-4B63192CCD8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01B6BD59-E0BB-4C0A-96B9-295410E23D48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01B6BD59-E0BB-4C0A-96B9-295410E23D48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01B6BD59-E0BB-4C0A-96B9-295410E23D48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01B6BD59-E0BB-4C0A-96B9-295410E23D48}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
