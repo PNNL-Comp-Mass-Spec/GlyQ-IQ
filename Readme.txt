@@ -16,6 +16,8 @@ IQGlyQ_Console.exe is the main application.
 Source code for the 64-bit version is located at GetPeaks3\IQGlyQ_Console
 though the master solution file is GetPeaks3\GetPeaks3.sln
 
+When compiling and debugging, use the MixedPlatforms configuration of GetPeaks3.sln
+
 There is also a 32-bit version, but the code-base may be a bit out of date.
 That solution file is at GetPeaks2\GetPeaks2.sln
 
