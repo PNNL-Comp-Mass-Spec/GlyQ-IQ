@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WorkflowParameters>
+  <AreaOfPeakToSumInDynamicSumming>2</AreaOfPeakToSumInDynamicSumming>
+  <ChromatogramCorrelationIsPerformed>true</ChromatogramCorrelationIsPerformed>
+  <ChromGeneratorMode>MOST_ABUNDANT_PEAK</ChromGeneratorMode>
+  <ChromGenSourceDataPeakBR>2</ChromGenSourceDataPeakBR>
+  <ChromGenSourceDataSigNoise>3</ChromGenSourceDataSigNoise>
+  <ChromNETTolerance>0.5</ChromNETTolerance>
+  <ChromPeakDetectorPeakBR>1</ChromPeakDetectorPeakBR>
+  <ChromPeakDetectorSigNoise>1</ChromPeakDetectorSigNoise>
+  <ChromPeakSelectorMode>Smart</ChromPeakSelectorMode>
+  <ChromSmootherNumPointsInSmooth>9</ChromSmootherNumPointsInSmooth>
+  <ChromToleranceInPPM>10</ChromToleranceInPPM>
+  <MaxScansSummedInDynamicSumming>100</MaxScansSummedInDynamicSumming>
+  <MSPeakDetectorPeakBR>1.3</MSPeakDetectorPeakBR>
+  <MSPeakDetectorSigNoise>3</MSPeakDetectorSigNoise>
+  <MSToleranceInPPM>20</MSToleranceInPPM>
+  <MultipleHighQualityMatchesAreAllowed>true</MultipleHighQualityMatchesAreAllowed>
+  <NumChromPeaksAllowedDuringSelection>40</NumChromPeaksAllowedDuringSelection>
+  <NumMSScansToSum>5</NumMSScansToSum>
+  <ResultType>BASIC_TARGETED_RESULT</ResultType>
+  <SummingMode>SUMMINGMODE_STATIC</SummingMode>
+  <WorkflowType>UnlabelledTargeted1</WorkflowType>
+</WorkflowParameters>
