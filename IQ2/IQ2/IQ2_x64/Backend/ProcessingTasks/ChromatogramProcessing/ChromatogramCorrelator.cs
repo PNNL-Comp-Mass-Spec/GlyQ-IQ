@@ -1,0 +1,21 @@
+﻿using Run64.Backend;
+using Run64.Backend.Core;
+using Run64.Backend.Core.Results;
+
+namespace IQ_X64.Backend.ProcessingTasks.ChromatogramProcessing
+{
+    public class ChromatogramCorrelator : ChromatogramCorrelatorBase
+    {
+        public ChromatogramCorrelator(int numPointsInSmoother, double minRelativeIntensityForChromCorr = 0.01,double chromToleranceInPPM = 20, Globals.ToleranceUnit chromToleranceUnit=Globals.ToleranceUnit.PPM)
+            : base(numPointsInSmoother, minRelativeIntensityForChromCorr, chromToleranceInPPM,chromToleranceUnit)
+        {
+        }
+
+        public override ChromCorrelationData CorrelateData(Run run, TargetedResultBase result, int startScan, int stopScan)
+        {
+            {
+                return CorrelatePeaksWithinIsotopicProfile(run, result.IsotopicProfile, startScan, stopScan);
+            }
+        }
+    }
+}

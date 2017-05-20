@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B11A34D2-4B43-46CB-A1DC-844A0FACFB45}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IQ2</RootNamespace>
+    <AssemblyName>IQ2</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>U:\DLL_Files\Fast_DLL\X86 IQ\X86\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MathNet.Numerics">
+      <HintPath>..\..\..\X86 Run\X86\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="PNNLOmics">
+      <HintPath>..\..\..\X86 Run\X86\PNNLOmics.dll</HintPath>
+    </Reference>
+    <Reference Include="Run32">
+      <HintPath>..\..\..\X86 Run\X86\Run32.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Backend\Core\ChromPeakNotFoundResultFlag.cs" />
+    <Compile Include="Backend\Core\LcmsFeatureTarget.cs" />
+    <Compile Include="Backend\Core\PeakToTheLeftResultFlag.cs" />
+    <Compile Include="Backend\Core\PeptideTarget.cs" />
+    <Compile Include="Backend\Core\TargetCollection.cs" />
+    <Compile Include="Backend\Core\TaskIQ.cs" />
+    <Compile Include="Backend\Parameters\ParametersBase.cs" />
+    <Compile Include="Backend\Parameters\PeakDetectorParameters.cs" />
+    <Compile Include="Backend\ProcessingTasks\ChromatogramProcessing\ChromatogramCorrelator.cs" />
+    <Compile Include="Backend\ProcessingTasks\ChromatogramProcessing\ChromatogramCorrelatorBase.cs" />
+    <Compile Include="Backend\ProcessingTasks\FitScoreCalculators\AreaFitter.cs" />
+    <Compile Include="Backend\ProcessingTasks\FitScoreCalculators\DeconToolsFitScoreCalculator.cs" />
+    <Compile Include="Backend\ProcessingTasks\FitScoreCalculators\IFitScoreCalculator.cs" />
+    <Compile Include="Backend\ProcessingTasks\FitScoreCalculators\IsotopicPeakFitScoreCalculator.cs" />
+    <Compile Include="Backend\ProcessingTasks\FitScoreCalculators\IsotopicProfileFitScoreCalculator.cs" />
+    <Compile Include="Backend\ProcessingTasks\FitScoreCalculators\LeastSquaresFitter.cs" />
+    <Compile Include="Backend\ProcessingTasks\FitScoreCalculators\PeakLeastSquaresFitter.cs" />
+    <Compile Include="Backend\ProcessingTasks\LCGenerators\ChromatogramGenerator.cs" />
+    <Compile Include="Backend\ProcessingTasks\LCGenerators\PeakChromatogramGenerator.cs" />
+    <Compile Include="Backend\ProcessingTasks\MSGeneratorFactory.cs" />
+    <Compile Include="Backend\ProcessingTasks\MSGenerators\GenericMSGenerator.cs" />
+    <Compile Include="Backend\ProcessingTasks\MSGenerators\MSGenerator.cs" />
+    <Compile Include="Backend\ProcessingTasks\MSGenerators\SyntheticMSGeneratorFromPeakData.cs" />
+    <Compile Include="Backend\ProcessingTasks\PeakDetectors\ChromPeakDetector.cs" />
+    <Compile Include="Backend\ProcessingTasks\PeakDetectors\ChromPeakDetectorMedianBased.cs" />
+    <Compile Include="Backend\ProcessingTasks\PeakDetectors\ChromPeakDetectorOld.cs" />
+    <Compile Include="Backend\ProcessingTasks\PeakDetectors\DeconToolsPeakDetector.cs" />
+    <Compile Include="Backend\ProcessingTasks\PeakDetectors\DeconToolsPeakDetectorV2.cs" />
+    <Compile Include="Backend\ProcessingTasks\PeakDetectors\PeakDetector.cs" />
+    <Compile Include="Backend\ProcessingTasks\Quantifiers\BasicN14N15Quantifier.cs" />
+    <Compile Include="Backend\ProcessingTasks\Quantifiers\BasicO16O18Quantifier.cs" />
+    <Compile Include="Backend\ProcessingTasks\Quantifiers\IN14N15Quantifier.cs" />
+    <Compile Include="Backend\ProcessingTasks\Quantifiers\N14N15QuantifierTask.cs" />
+    <Compile Include="Backend\ProcessingTasks\Quantifiers\O16O18QuantifierBase.cs" />
+    <Compile Include="Backend\ProcessingTasks\Quantifiers\O16O18QuantifierTask.cs" />
+    <Compile Include="Backend\ProcessingTasks\Quantifiers\PartialLabelingQuantifier.cs" />
+    <Compile Include="Backend\ProcessingTasks\ResultValidators\InterferenceScorer.cs" />
+    <Compile Include="Backend\ProcessingTasks\ResultValidators\IsotopicProfileInterferenceScorer.cs" />
+    <Compile Include="Backend\ProcessingTasks\ResultValidators\LabelledIsotopicProfileScorer.cs" />
+    <Compile Include="Backend\ProcessingTasks\ResultValidators\LeftOfMonoPeakLooker.cs" />
+    <Compile Include="Backend\ProcessingTasks\ResultValidators\ResultValidationUtils.cs" />
+    <Compile Include="Backend\ProcessingTasks\ResultValidators\ResultValidator.cs" />
+    <Compile Include="Backend\ProcessingTasks\ResultValidators\ResultValidatorTask.cs" />
+    <Compile Include="Backend\ProcessingTasks\Smoothers\DeconToolsSavitzkyGolaySmoother.cs" />
+    <Compile Include="Backend\ProcessingTasks\Smoothers\ISmoother.cs" />
+    <Compile Include="Backend\ProcessingTasks\Smoothers\SavitzkyGolaySmoother.cs" />
+    <Compile Include="Backend\ProcessingTasks\TargetedFeatureFinders\BasicTFF.cs" />
+    <Compile Include="Backend\ProcessingTasks\TargetedFeatureFinders\IterativeTFF.cs" />
+    <Compile Include="Backend\ProcessingTasks\TargetedFeatureFinders\IterativeTFFParameters.cs" />
+    <Compile Include="Backend\ProcessingTasks\TargetedFeatureFinders\TFFBase.cs" />
+    <Compile Include="Backend\ProcessingTasks\TheorFeatureGenerator\ITheorFeatureGenerator.cs" />
+    <Compile Include="Backend\ProcessingTasks\TheorFeatureGenerator\JoshTheorFeatureGenerator.cs" />
+    <Compile Include="Backend\ProcessingTasks\TheorFeatureGenerator\MercuryFeatureGenerator.cs" />
+    <Compile Include="Backend\ProcessingTasks\TheorFeatureGenerator\NominalMassFeatureGenerator.cs" />
+    <Compile Include="Backend\ProcessingTasks\TheorFeatureGenerator\TomTheorFeatureGenerator.cs" />
+    <Compile Include="Backend\Results\LcmsFeatureTargetedResult.cs" />
+    <Compile Include="Backend\Results\SipperLcmsTargetedResult.cs" />
+    <Compile Include="Backend\Utilities\Converters\PeakTypeConverter.cs" />
+    <Compile Include="Backend\Utilities\IsotopeDistributionCalculation\BionomialExpansionIsotopicProfileCalculator.cs" />
+    <Compile Include="Backend\Utilities\IsotopeDistributionCalculation\IsotopicDistributionCalculator.cs" />
+    <Compile Include="Backend\Utilities\IsotopeDistributionCalculation\LabeledIsotopicDistUtilities\IsotopicProfileComponent.cs" />
+    <Compile Include="Backend\Utilities\IsotopeDistributionCalculation\LabeledIsotopicDistUtilities\LabeledIsotopicProfileUtilities.cs" />
+    <Compile Include="Backend\Utilities\IsotopeDistributionCalculation\MercuryIsotopicDistribution\MercuryDist.cs" />
+    <Compile Include="Backend\Utilities\IsotopeDistributionCalculation\MercuryIsotopicDistribution\MercuryDistCollection.cs" />
+    <Compile Include="Backend\Utilities\IsotopeDistributionCalculation\MercuryIsotopicDistribution\MercuryDistCollectionCreator.cs" />
+    <Compile Include="Backend\Utilities\IsotopeDistributionCalculation\MercuryIsotopicDistribution\MercuryDistributionCreator.cs" />
+    <Compile Include="Backend\Utilities\IsotopeDistributionCalculation\MercuryIsotopicDistribution\MercuryIsoDistCreator2.cs" />
+    <Compile Include="Backend\Utilities\IsotopeDistributionCalculation\TheorXYDataCalculationUtilities.cs" />
+    <Compile Include="Backend\Utilities\IsotopeDistributionCalculation\TomIsotopicDistribution\DeuteriumIsotopeProfileGenerator.cs" />
+    <Compile Include="Backend\Utilities\IsotopeDistributionCalculation\TomIsotopicDistribution\N15IsotopeProfileGenerator.cs" />
+    <Compile Include="Backend\Utilities\IsotopeDistributionCalculation\TomIsotopicDistribution\TomIsotopicPattern.cs" />
+    <Compile Include="Backend\Utilities\Logger.cs" />
+    <Compile Include="Backend\Utilities\MolecularFormula.cs" />
+    <Compile Include="Backend\Utilities\RunUtilitiesPeaks.cs" />
+    <Compile Include="DeconEngine\PeakDetection\clsPeak.cs" />
+    <Compile Include="DeconEngine\PeakDetection\Peak.cs" />
+    <Compile Include="DeconEngine\PeakDetection\PeakData.cs" />
+    <Compile Include="DeconEngine\PeakDetection\PeakFit.cs" />
+    <Compile Include="DeconEngine\PeakDetection\PeakIndex.cs" />
+    <Compile Include="DeconEngine\PeakDetection\PeakProcessor.cs" />
+    <Compile Include="DeconEngine\PeakDetection\PeakProcessorEnum.cs" />
+    <Compile Include="DeconEngine\PeakDetection\PeakProcessorHelpers.cs" />
+    <Compile Include="DeconEngine\PeakDetection\PeakStatistician.cs" />
+    <Compile Include="HelloWorld.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Workflows\Alignment\AlignmentResult.cs" />
+    <Compile Include="Workflows\Alignment\NETAndMassAlignerParameters.cs" />
+    <Compile Include="Workflows\Core\ChromPeakSelection\BasicChromPeakSelector.cs" />
+    <Compile Include="Workflows\Core\ChromPeakSelection\ChromPeakAnalyzer.cs" />
+    <Compile Include="Workflows\Core\ChromPeakSelection\ChromPeakSelectorBase.cs" />
+    <Compile Include="Workflows\Core\ChromPeakSelection\ChromPeakSelectorParameters.cs" />
+    <Compile Include="Workflows\Core\ChromPeakSelection\SmartChromPeakSelector.cs" />
+    <Compile Include="Workflows\Core\ChromPeakSelection\SmartChromPeakSelectorBase.cs" />
+    <Compile Include="Workflows\Core\ChromPeakSelection\SmartChromPeakSelectorParameters.cs" />
+    <Compile Include="Workflows\Core\IQChargeStateTarget.cs" />
+    <Compile Include="Workflows\Core\IQExecutor.cs" />
+    <Compile Include="Workflows\Core\IQResult.cs" />
+    <Compile Include="Workflows\Core\IqResultDetail.cs" />
+    <Compile Include="Workflows\Core\IQTarget.cs" />
+    <Compile Include="Workflows\Core\IqTargetBasic.cs" />
+    <Compile Include="Workflows\Core\IqWorkflowAssigner.cs" />
+    <Compile Include="Workflows\Core\NETGrouping.cs" />
+    <Compile Include="Workflows\Core\TargetedWorkflowExecutorProgressInfo.cs" />
+    <Compile Include="Workflows\FileIO\DeuteratedTargetedResultToTextExporter.cs" />
+    <Compile Include="Workflows\FileIO\DTO\DeconToolsResultDTO.cs" />
+    <Compile Include="Workflows\FileIO\DTO\DeuteratedTargetedResultDTO.cs" />
+    <Compile Include="Workflows\FileIO\DTO\N14N15TargetedResultDTO.cs" />
+    <Compile Include="Workflows\FileIO\DTO\O16O18TargetedResultDTO.cs" />
+    <Compile Include="Workflows\FileIO\DTO\ResultDTOFactory.cs" />
+    <Compile Include="Workflows\FileIO\DTO\SipperLcmsFeatureTargetedResultDTO.cs" />
+    <Compile Include="Workflows\FileIO\DTO\TargetedResultDTO.cs" />
+    <Compile Include="Workflows\FileIO\DTO\TopDownTargetedResultDTO.cs" />
+    <Compile Include="Workflows\FileIO\DTO\UnlabelledTargetedResultDTO.cs" />
+    <Compile Include="Workflows\FileIO\ExporterBase.cs" />
+    <Compile Include="Workflows\FileIO\Importers\BasicIqTargetImporter.cs" />
+    <Compile Include="Workflows\FileIO\Importers\IMassTagImporter.cs" />
+    <Compile Include="Workflows\FileIO\Importers\Importer.cs" />
+    <Compile Include="Workflows\FileIO\Importers\ImporterBase.cs" />
+    <Compile Include="Workflows\FileIO\Importers\IPeakImporter.cs" />
+    <Compile Include="Workflows\FileIO\Importers\IqTargetImporter.cs" />
+    <Compile Include="Workflows\FileIO\Importers\IsosImporter.cs" />
+    <Compile Include="Workflows\FileIO\Importers\LcmsTargetFromFeaturesFileImporter.cs" />
+    <Compile Include="Workflows\FileIO\Importers\PeakImporterFromSQLite.cs" />
+    <Compile Include="Workflows\FileIO\Importers\PeakImporterFromText.cs" />
+    <Compile Include="Workflows\FileIO\IPeakListExporter.cs" />
+    <Compile Include="Workflows\FileIO\IqLabelFreeResultExporter.cs" />
+    <Compile Include="Workflows\FileIO\MassTagFromTextFileImporter.cs" />
+    <Compile Include="Workflows\FileIO\N14N15TargetedResultToTextExporter.cs" />
+    <Compile Include="Workflows\FileIO\O16O18TargetedResultToTextExporter.cs" />
+    <Compile Include="Workflows\FileIO\PeakListTextExporter.cs" />
+    <Compile Include="Workflows\FileIO\ResultExporter.cs" />
+    <Compile Include="Workflows\FileIO\SipperResultToLcmsFeatureExporter.cs" />
+    <Compile Include="Workflows\FileIO\TargetedResultFromTextImporter.cs" />
+    <Compile Include="Workflows\FileIO\TargetedResultRepository.cs" />
+    <Compile Include="Workflows\FileIO\TargetedResultToTextExporter.cs" />
+    <Compile Include="Workflows\FileIO\TextFileExporter.cs" />
+    <Compile Include="Workflows\FileIO\TopDownTargetedResultToTextExporter.cs" />
+    <Compile Include="Workflows\FileIO\UnlabelledTargetedResultFromTextImporter.cs" />
+    <Compile Include="Workflows\FileIO\UnlabelledTargetedResultToTextExporter.cs" />
+    <Compile Include="Workflows\GlobalsWorkflow.cs" />
+    <Compile Include="Workflows\Utilities\ChromPeakUtilities.cs" />
+    <Compile Include="Workflows\Utilities\FileUtilities.cs" />
+    <Compile Include="Workflows\Utilities\IqResultUtilities.cs" />
+    <Compile Include="Workflows\Utilities\IQTargetUtilities.cs" />
+    <Compile Include="Workflows\Utilities\MathUtilities.cs" />
+    <Compile Include="Workflows\WorkFlowParameters\BasicTargetedWorkflowExecutorParameters.cs" />
+    <Compile Include="Workflows\WorkFlowParameters\BasicTargetedWorkflowParameters.cs" />
+    <Compile Include="Workflows\WorkFlowParameters\LcmsFeatureTargetedWorkflowExecutorParameters.cs" />
+    <Compile Include="Workflows\WorkFlowParameters\N14N15Workflow2Parameters.cs" />
+    <Compile Include="Workflows\WorkFlowParameters\O16O18WorkflowParameters.cs" />
+    <Compile Include="Workflows\WorkFlowParameters\PeakDetectAndExportWorkflowParameters.cs" />
+    <Compile Include="Workflows\WorkFlowParameters\SipperTargetedWorkflowParameters.cs" />
+    <Compile Include="Workflows\WorkFlowParameters\SipperWorkflowExecutorParameters.cs" />
+    <Compile Include="Workflows\WorkFlowParameters\TargetedAlignerWorkflowParameters.cs" />
+    <Compile Include="Workflows\WorkFlowParameters\TargetedWorkflowParameters.cs" />
+    <Compile Include="Workflows\WorkFlowParameters\TopDownTargetedWorkflowExecutorParameters.cs" />
+    <Compile Include="Workflows\WorkFlowParameters\TopDownTargetedWorkflowParameters.cs" />
+    <Compile Include="Workflows\WorkFlowParameters\WorkflowExecutorBaseParameters.cs" />
+    <Compile Include="Workflows\WorkFlowParameters\WorkflowParameters.cs" />
+    <Compile Include="Workflows\WorkFlowPile\BasicTargetedWorkflow.cs" />
+    <Compile Include="Workflows\WorkFlowPile\BasicTargetedWorkflowExecutor.cs" />
+    <Compile Include="Workflows\WorkFlowPile\IQMillionWorkflow.cs" />
+    <Compile Include="Workflows\WorkFlowPile\IQWorkflow.cs" />
+    <Compile Include="Workflows\WorkFlowPile\N14N15Workflow2.cs" />
+    <Compile Include="Workflows\WorkFlowPile\PeakDetectAndExportWorkflow.cs" />
+    <Compile Include="Workflows\WorkFlowPile\TargetedWorkflow.cs" />
+    <Compile Include="Workflows\WorkFlowPile\TargetedWorkflowExecutor.cs" />
+    <Compile Include="Workflows\WorkFlowPile\WorkflowBase.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy *.dll "$(SolutionDir)\..\..\X86 IQ\X86" /D /Y
+xcopy *.pdb "$(SolutionDir)\..\..\X86 IQ\X86" /D /Y
+</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
