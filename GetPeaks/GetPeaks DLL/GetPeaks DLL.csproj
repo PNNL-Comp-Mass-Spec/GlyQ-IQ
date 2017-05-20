@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{821336B6-6A28-49FD-B6A0-CD7DA49E11D6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GetPeaks_DLL</RootNamespace>
+    <AssemblyName>GetPeaks DLL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\Fast DLL\X86 GetPeaksDLL\X86 GetPeaksDLL\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CompareContrastDLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>U:\DLL_Files\Fast_DLL\X86 CompareContrast\CompareContrastDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="DeconEngineV2, Version=1.0.4408.30259, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>U:\DLL_Files\Fast_DLL\X86 DeconTools Net 4\x86\Release\DeconEngineV2.dll</HintPath>
+    </Reference>
+    <Reference Include="DeconTools.Backend">
+      <HintPath>U:\DLL_Files\Fast_DLL\X86 DeconTools Net 4\x86\Release\DeconTools.Backend.dll</HintPath>
+    </Reference>
+    <Reference Include="GlycolyzerEngineGUI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>U:\DLL_Files\Fast_DLL\X86 GlycolyzerGUI\GlycolyzerEngineGUI.dll</HintPath>
+    </Reference>
+    <Reference Include="GlycolyzerGUImvvm, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <ExecutableExtension>.exe</ExecutableExtension>
+      <HintPath>U:\DLL_Files\Fast_DLL\X86 GlycolyzerGUImvvm\GlycolyzerGUImvvm.exe</HintPath>
+    </Reference>
+    <Reference Include="HammerPeakDetector, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>U:\DLL_Files\Fast_DLL\X86 HammerPeakDetector\Release\HammerPeakDetector.dll</HintPath>
+    </Reference>
+    <Reference Include="HammerPeakSupport">
+      <HintPath>U:\DLL_Files\Fast_DLL\X86 HammerSupport\HammerPeakSupport.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics, Version=2.1.2.21, Culture=neutral, PublicKeyToken=cd8b63ad3d691a37, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>U:\DLL_Files\Fast_DLL\X86 MathNet\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="MemoryOverloadProfilierX86">
+      <HintPath>U:\DLL_Files\Fast_DLL\X86 Memory Profliler\X86 Memory Profliler\MemoryOverloadProfilierX86.dll</HintPath>
+    </Reference>
+    <Reference Include="OmniFinder">
+      <HintPath>U:\DLL_Files\Fast_DLL\X86 OmniFinder\OmniFinder.dll</HintPath>
+    </Reference>
+    <Reference Include="PNNLOmics, Version=1.0.5018.26511, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\PNNL CSharp1\SVN PNNL Omics\PNNLOmics HPC\development\trunk\PNNLOmics\bin\AnyCPU\Debug\PNNLOmics.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Fast DLL\X86 SQLite\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="YAFMS-DB-X86">
+      <HintPath>U:\DLL_Files\Fast_DLL\X86 YAFMSDB\X86\YAFMS-DB-X86.dll</HintPath>
+    </Reference>
+    <Reference Include="YafmsLibrary, Version=1.0.4322.18286, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>U:\DLL_Files\Fast_DLL\X86 YAFMS Library\YafmsLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnalysisSupport\AppendToLibrary.cs" />
+    <Compile Include="AnalysisSupport\GetDataController.cs" />
+    <Compile Include="AnalysisSupport\Tools\CheckFileIsPresent.cs" />
+    <Compile Include="AnalysisSupport\Tools\ConvertArgsToValues.cs" />
+    <Compile Include="AnalysisSupport\Tools\ConvertStringToBool.cs" />
+    <Compile Include="AnalysisSupport\Tools\ConvertToAminoGlycan.cs" />
+    <Compile Include="CalculateElutingPeakRanges.cs" />
+    <Compile Include="Common Switches\SwitchPeakFitType.cs" />
+    <Compile Include="CompareContrast\CompareContrast2.cs" />
+    <Compile Include="CompareContrast\CompareController.cs" />
+    <Compile Include="CompareContrast\CompareObjects.cs" />
+    <Compile Include="ConosleUtilities\ConvertAToB.cs" />
+    <Compile Include="ConosleUtilities\FileTarget.cs" />
+    <Compile Include="ConosleUtilities\ParseStrings.cs" />
+    <Compile Include="ConosleUtilities\WriteParameterFiles.cs" />
+    <Compile Include="ConvertToOmics.cs" />
+    <Compile Include="CrossCorrelateResults.cs" />
+    <Compile Include="DataFIFO\DataPeaksDataWriter.cs" />
+    <Compile Include="DataFIFO\IPeakListExporter.cs" />
+    <Compile Include="DataFIFO\PeakListTextExporter.cs" />
+    <Compile Include="DelegateCode\Factory.cs" />
+    <Compile Include="DelegateCode\InterfaceDemo.cs" />
+    <Compile Include="DelegateCode\StrategyUnitTestRunner.cs" />
+    <Compile Include="DelegateCode\WorkerClass.cs" />
+    <Compile Include="Functions\ConvertDatabaseTransferObject.cs" />
+    <Compile Include="Functions\ConvertIsotopeObjects.cs" />
+    <Compile Include="Functions\ConvertMonoToMz.cs" />
+    <Compile Include="Functions\ConvertMSPeakToPeakCentric.cs" />
+    <Compile Include="Functions\ConvertMzToMono.cs" />
+    <Compile Include="Functions\ConvertOldThrashParametersToNew.cs" />
+    <Compile Include="Functions\ConvertOmicsProcessedPeaksToDeconPeaks.cs" />
+    <Compile Include="Functions\ConvertPeakListDeconToOmics.cs" />
+    <Compile Include="Functions\ConvertProcessedPeakToDeconPeak.cs" />
+    <Compile Include="Functions\ConvertProcessedPeakToXYData.cs" />
+    <Compile Include="Functions\ConvertSigmaAndPValue.cs" />
+    <Compile Include="Functions\CopyFile.cs" />
+    <Compile Include="Functions\DictionaryReplacement.cs" />
+    <Compile Include="Functions\MassCalibration.cs" />
+    <Compile Include="Functions\ModifyList.cs" />
+    <Compile Include="Functions\RemoveEnding.cs" />
+    <Compile Include="Glycolyzer\GlycolyzerFunction.cs" />
+    <Compile Include="Go Decon Modules\GoPeakDetection.cs" />
+    <Compile Include="Go Decon Modules\GoThrashEngine.cs" />
+    <Compile Include="Go Decon Modules\ParametersForTesting.cs" />
+    <Compile Include="Objects\ChargeObject.cs" />
+    <Compile Include="Objects\Enumerations\SpectraCollectionMode.cs" />
+    <Compile Include="Objects\GlycanComposition.cs" />
+    <Compile Include="Objects\ParameterObjects\DataBaseAnalysisArgs.cs" />
+    <Compile Include="Objects\ParameterObjects\PopulatorArgs.cs" />
+    <Compile Include="Objects\TandemMSObjects\AttributeCentric.cs" />
+    <Compile Include="Objects\TandemMSObjects\CentricFeature.cs" />
+    <Compile Include="Objects\TandemMSObjects\PeakCentric.cs" />
+    <Compile Include="Objects\TandemMSObjects\ScanCentric.cs" />
+    <Compile Include="Objects\TandemMSObjects\FragmentCentric.cs" />
+    <Compile Include="Objects\TitleWithList.cs" />
+    <Compile Include="Go Decon Modules\ParametersDeconToolsPeakDetection.cs" />
+    <Compile Include="Go Decon Modules\ParametersPeakDetection.cs" />
+    <Compile Include="Go Decon Modules\ParametersTHRASH.cs" />
+    <Compile Include="Go Decon Modules\ResultsTHRASH.cs" />
+    <Compile Include="Objects\Enumerations\DeconvolutionOptions.cs" />
+    <Compile Include="Objects\Enumerations\PeakCentroidOptions.cs" />
+    <Compile Include="Objects\Enumerations\PeakDetectors.cs" />
+    <Compile Include="Objects\Enumerations\ScanSummingRanges.cs" />
+    <Compile Include="Go Decon Modules\ResultsPeakDetection.cs" />
+    <Compile Include="Parallel\DoWork\DoWorkTHRASH.cs" />
+    <Compile Include="Parallel\DoWork\DoWorkTHREAD.cs" />
+    <Compile Include="Parallel\ParalellAssignEngine.cs" />
+    <Compile Include="Parallel\ParalellController.cs" />
+    <Compile Include="Parallel\ParalellDoWork.cs" />
+    <Compile Include="Parallel\ParalellEngine.cs" />
+    <Compile Include="Parallel\ParalellEngineStation.cs" />
+    <Compile Include="Parallel\ParalellHardDrive.cs" />
+    <Compile Include="Parallel\ParalellLog.cs" />
+    <Compile Include="Parallel\ParalellParameters.cs" />
+    <Compile Include="Parallel\ParalellResults.cs" />
+    <Compile Include="Parallel\ParalellThreadData.cs" />
+    <Compile Include="Parallel\SemaphoreCode.cs" />
+    <Compile Include="SQLiteEngine\EngineSQLite.cs" />
+    <Compile Include="SQLiteEngine\EngineStationSQLite.cs" />
+    <Compile Include="SQLiteEngine\ParametersSQLite.cs" />
+    <Compile Include="SQLiteEngine\TableInformation\FeatureLiteTable.cs" />
+    <Compile Include="SQLite\DataTransferConverters\SetDataTransferObjects.cs" />
+    <Compile Include="SQLite\DataTransferObjects\DatabaseAttributeCentricObject.cs" />
+    <Compile Include="SQLite\DataTransferObjects\DatabaseElutingPeakObject.cs" />
+    <Compile Include="SQLite\DataTransferObjects\DatabaseFeatureLiteObject.cs" />
+    <Compile Include="SQLite\DataTransferObjects\DatabaseFragmentCentricObject.cs" />
+    <Compile Include="SQLite\DataTransferObjects\DatabaseIsotopeObject.cs" />
+    <Compile Include="DataFIFO\DataIsotopesToText.cs" />
+    <Compile Include="DataFIFO\DataPeaksToViper.cs" />
+    <Compile Include="DataFIFO\DataXYDataWriter.cs" />
+    <Compile Include="DataFIFO\DeconFIFO\ISOSImporter.cs" />
+    <Compile Include="DataFIFO\DeconFIFO\PeaksImporter.cs" />
+    <Compile Include="DataFIFO\FileIterator.cs" />
+    <Compile Include="DataFIFO\FileIteratorStringOnly.cs" />
+    <Compile Include="DataFIFO\FileListNameImporter.cs" />
+    <Compile Include="DataFIFO\FileLoadController.cs" />
+    <Compile Include="DataFIFO\StringLoadTextFileLine.cs" />
+    <Compile Include="DataFIFO\LoadScanList.cs" />
+    <Compile Include="DataFIFO\LoadTandemData.cs" />
+    <Compile Include="DataFIFO\ILoadFile.cs" />
+    <Compile Include="DataFIFO\LoadXYData.cs" />
+    <Compile Include="DataFIFO\OmicsFIFO\IDataFileReader.cs" />
+    <Compile Include="DataFIFO\OmicsFIFO\IDataFileWriter.cs" />
+    <Compile Include="DataFIFO\OmicsFIFO\IMSLightElutingPeakFeatureReader.cs" />
+    <Compile Include="DataFIFO\OmicsFIFO\IMSLightFeatureReader.cs" />
+    <Compile Include="DataFIFO\OmicsFIFO\UMCLightTextReader.cs" />
+    <Compile Include="DataFIFO\OmicsFIFO\UMCLightTextWriter.cs" />
+    <Compile Include="DataFIFO\ResultsWriter.cs" />
+    <Compile Include="DataFIFO\StringListToDisk.cs" />
+    <Compile Include="DataFIFO\WriteGlycolyzerToDisk.cs" />
+    <Compile Include="DeconToolsPart2\CalculateElutingPeakFeatures.cs" />
+    <Compile Include="DeconToolsPart2\ElutingPeakFinderPart2.cs" />
+    <Compile Include="DeconToolsPart2\Part1Net35.cs" />
+    <Compile Include="DeconToolsPart2\Part2Net35.cs" />
+    <Compile Include="DeconToolsPart2\Part2Net40.cs" />
+    <Compile Include="ElutingPeakFinderParametersPart2.cs" />
+    <Compile Include="ElutingPeakScanSet.cs" />
+    <Compile Include="Functions\ConvertArgsToFileName.cs" />
+    <Compile Include="Functions\ConvertArgsToStringList.cs" />
+    <Compile Include="Functions\ConvertDeconScansetCollection.cs" />
+    <Compile Include="Functions\ConvertFeatureIMSToFeatureViper.cs" />
+    <Compile Include="Functions\ConvertFeaturesToOtherFeatures.cs" />
+    <Compile Include="Functions\IConverter.cs" />
+    <Compile Include="Functions\ConvertIsosToString.cs" />
+    <Compile Include="Functions\ConvertXyDataToString.cs" />
+    <Compile Include="Functions\DifferenceFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\ParsePeaksToPeakDecon.cs" />
+    <Compile Include="Functions\ParseScanFileToInt.cs" />
+    <Compile Include="Functions\ParseStringListToIMSFeature.cs" />
+    <Compile Include="Functions\ParseStringListToIsos.cs" />
+    <Compile Include="Functions\ParseStringListToViperFeature.cs" />
+    <Compile Include="Functions\ParseStringListToXYData.cs" />
+    <Compile Include="Functions\ParseThermoScanInfo.cs" />
+    <Compile Include="Functions\ConvertXYData.cs" />
+    <Compile Include="Functions\ErrorCalculator.cs" />
+    <Compile Include="Functions\LabTimer.cs" />
+    <Compile Include="GetPeaksPeakDetector.cs" />
+    <Compile Include="Glycolyzer\Enumerations\FeatureOriginType.cs" />
+    <Compile Include="Glycolyzer\Enumerations\LibraryType.cs" />
+    <Compile Include="Glycolyzer\GlycolyzerController.cs" />
+    <Compile Include="Glycolyzer\LoadGlycanLibraries.cs" />
+    <Compile Include="Glycolyzer\LoadParameterFile.cs" />
+    <Compile Include="Glycolyzer\Objects\OmnifinderCheckObject.cs" />
+    <Compile Include="Glycolyzer\ParameterConverters\ConvertAdduct.cs" />
+    <Compile Include="Glycolyzer\ParameterConverters\ConvertAminoAcids.cs" />
+    <Compile Include="Glycolyzer\ParameterConverters\ConvertCarbohydrateType.cs" />
+    <Compile Include="Glycolyzer\ParameterConverters\ConvertFeatureOriginType.cs" />
+    <Compile Include="Glycolyzer\ParameterConverters\ConvertLibraryType.cs" />
+    <Compile Include="Glycolyzer\ParameterConverters\ConvertMiscellaneousMatter.cs" />
+    <Compile Include="Glycolyzer\ParameterConverters\ConvertMonosaccharides.cs" />
+    <Compile Include="Glycolyzer\ParameterConverters\ConvertUserUnits.cs" />
+    <Compile Include="Go Decon Modules\GoAccelerate.cs" />
+    <Compile Include="Go Decon Modules\GoAssignTransform.cs" />
+    <Compile Include="Go Decon Modules\GoCreateRun.cs" />
+    <Compile Include="Go Decon Modules\GoDeconToolsControllerA.cs" />
+    <Compile Include="Go Decon Modules\GoDeconToolsControllerB.cs" />
+    <Compile Include="ElutingPeakFinderController.cs" />
+    <Compile Include="ElutingPeakFinderParametersPart1.cs" />
+    <Compile Include="Go Decon Modules\GoGetFileType.cs" />
+    <Compile Include="Go Decon Modules\GoMsGenerator.cs" />
+    <Compile Include="Go Decon Modules\GoResults.cs" />
+    <Compile Include="Go Decon Modules\GoTHRASH.cs" />
+    <Compile Include="Go Decon Modules\GoTransformParameters.cs" />
+    <Compile Include="Go Decon Modules\GoTransformPrep.cs" />
+    <Compile Include="Isotopes\Averagine.cs" />
+    <Compile Include="Isotopes\IsotopeProfile.cs" />
+    <Compile Include="Isotopes\TheoryIsotope.cs" />
+    <Compile Include="Objects\BioFactor.cs" />
+    <Compile Include="Objects\DataSet.cs" />
+    <Compile Include="Objects\DifferenceFinderObjects\DifferenceObjectIsos.cs" />
+    <Compile Include="Objects\DifferenceFinderObjects\ScanDifferences.cs" />
+    <Compile Include="Objects\FeatureAbstract.cs" />
+    <Compile Include="Objects\IndexDoubleObject.cs" />
+    <Compile Include="Objects\ParameterObjects\GlycolyzerParametersGUI.cs" />
+    <Compile Include="Objects\ParameterObjects\PeakProcessingParameters.cs" />
+    <Compile Include="Objects\PeakDecon.cs" />
+    <Compile Include="Objects\DifferenceFinderObjects\DifferenceObject.cs" />
+    <Compile Include="Objects\ElutingPeakOmics.cs" />
+    <Compile Include="Objects\ElutingPeakLite.cs" />
+    <Compile Include="Objects\FeatureIMS.cs" />
+    <Compile Include="Objects\FeatureMultiAlign.cs" />
+    <Compile Include="Objects\FeatureViper.cs" />
+    <Compile Include="Objects\IsomerGlycanIndexes.cs" />
+    <Compile Include="Objects\ResultsObjects\GlycanResult.cs" />
+    <Compile Include="Objects\ResultsObjects\GlycolyzerResults.cs" />
+    <Compile Include="Objects\HornTransformParameters.cs" />
+    <Compile Include="Objects\InputOutputFileName.cs" />
+    <Compile Include="Common Switches\SwitchThreshold.cs" />
+    <Compile Include="Objects\Isomer.cs" />
+    <Compile Include="Objects\IsosObject.cs" />
+    <Compile Include="Objects\ResultsObjects\IsosResultLite.cs" />
+    <Compile Include="Objects\IsotopeObject.cs" />
+    <Compile Include="Objects\MemorySplitObject.cs" />
+    <Compile Include="Objects\ResultsObjects\MSPeakResultOmics.cs" />
+    <Compile Include="Objects\ParameterObjects\BatchFileGetPeaksParameterObject.cs" />
+    <Compile Include="Objects\ParameterObjects\GetPeaksParameterSetup.cs" />
+    <Compile Include="Objects\ParameterObjects\WizardAnalyzeGetPeaksFeature_IMSParameters.cs" />
+    <Compile Include="Objects\ParameterObjects\WizardAnalyzeGetPeaksSQLParameters.cs" />
+    <Compile Include="Objects\ParameterObjects\WizardAnalyzeGetPeaksSQL_IMSParameters.cs" />
+    <Compile Include="Objects\ResultsObjects\ResultCollectionLite.cs" />
+    <Compile Include="Objects\ResultsObjects\SampleResutlsObject.cs" />
+    <Compile Include="Objects\SimplifiedRun.cs" />
+    <Compile Include="Objects\ScanSumSelectSwitch.cs" />
+    <Compile Include="Objects\TandemMSObjects\TandemObjectMassAndScan.cs" />
+    <Compile Include="Objects\TandemMSObjects\TandemObject.cs" />
+    <Compile Include="Objects\TransformerObject.cs" />
+    <Compile Include="Objects\XYDataAndPeakHolderObject.cs" />
+    <Compile Include="Objects\XYDataInt64.cs" />
+    <Compile Include="ParameterWriters\GetPeaksAnalysisFileCreator.cs" />
+    <Compile Include="ParameterWriters\GetPeaksBatchFileCreator.cs" />
+    <Compile Include="ParameterWriters\GetPeaksParameterController.cs" />
+    <Compile Include="ParameterWriters\GetPeaksParameterFileCreator.cs" />
+    <Compile Include="PNNLOmics Modules\OrbitrapFilterParameters.cs" />
+    <Compile Include="PNNLOmics Modules\OrbitrapThreshold.cs" />
+    <Compile Include="ProcessDivision.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimpleWorkFlowParameters.cs" />
+    <Compile Include="SQLite\DatabaseAdaptor.cs" />
+    <Compile Include="SQLite\DatabaseLayer.cs" />
+    <Compile Include="SQLite\DatabaseReader.cs" />
+    <Compile Include="SQLite\DataTransferObjects\DatabaseCentricFeatureObject.cs" />
+    <Compile Include="SQLite\DataTransferObjects\DatabasePeakCentricObject.cs" />
+    <Compile Include="SQLite\DataTransferObjects\DatabasePeakDeconObject.cs" />
+    <Compile Include="SQLite\DataTransferObjects\DatabasePeakProcessedObject.cs" />
+    <Compile Include="SQLite\DataTransferObjects\DatabasePeakProcessedWithMZObject.cs" />
+    <Compile Include="SQLite\DataTransferObjects\DatabaseScanCentricObject.cs" />
+    <Compile Include="SQLite\DataTransferObjects\DatabaseScanObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SQLite\DataTransferObjects\PrecursorAndPeaksObject.cs" />
+    <Compile Include="SQLite\OneLineCalls\GetAllFragmentationScanNumbers.cs" />
+    <Compile Include="SQLite\OneLineCalls\GetAllScanNumbers.cs" />
+    <Compile Include="SQLite\OneLineCalls\GetCentroidedPeaks.cs" />
+    <Compile Include="SQLite\OneLineCalls\GetDatabaseScanCentricObjectInfo.cs" />
+    <Compile Include="SQLite\OneLineCalls\GetFragmentInfo.cs" />
+    <Compile Include="SQLite\OneLineCalls\GetMonoPeaksFromScan.cs" />
+    <Compile Include="SQLite\OneLineCalls\GetPrecursorPeakAndTandemMonoPeaks.cs" />
+    <Compile Include="SQLite\OneLineCalls\GetPrecursorPeakAndTandemPeaks.cs" />
+    <Compile Include="SQLite\OneLineCalls\GetPrecursorPeakAndTandemPeaksAndMonoPeaks.cs.cs" />
+    <Compile Include="SQLite\OneLineCalls\GetScanInfo.cs" />
+    <Compile Include="SQLite\OneLineCalls\GetThresholdedPeaksFromScan.cs" />
+    <Compile Include="SQLite\TableInformation\DatabaseFramework.cs" />
+    <Compile Include="Summing\AllignAndSum.cs" />
+    <Compile Include="Summing\AllignAndSum2.cs" />
+    <Compile Include="Summing\AllignAndSum3.cs" />
+    <Compile Include="Summing\AllignAndSum4.cs" />
+    <Compile Include="Summing\CacheXYData.cs" />
+    <Compile Include="Summing\GetXYData.cs" />
+    <Compile Include="TandemSupport\ArgsToParameters.cs" />
+    <Compile Include="TandemSupport\CentroidPeaksDetector.cs" />
+    <Compile Include="TandemSupport\GatherDatasetInfo.cs" />
+    <Compile Include="TandemSupport\GenerateTandemObjects.cs" />
+    <Compile Include="TandemSupport\SelectScans.cs" />
+    <Compile Include="TandemSupport\SpectraTandemPopulator.cs" />
+    <Compile Include="TandemSupport\TandemAnalysisResultPairObject.cs" />
+    <Compile Include="TandemSupport\TandemAnalysisResultsObject.cs" />
+    <Compile Include="THRASH\EngineStationTHRASH.cs" />
+    <Compile Include="THRASH\EngineTHRASH.cs" />
+    <Compile Include="THRASH\EngineThrashDeconvolutor.cs" />
+    <Compile Include="THRASH\ParalellThreadDataTHRASH.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="IMSCOMP.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Interop.XRAWFILE2Lib.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PNNLOmicsElementData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="System.Data.SQLite.dll" />
+    <Content Include="xerces-c_2_7.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="xerces-c_2_7D.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ParalellTargetsLibrary\ParalellTargetsLibrary.csproj">
+      <Project>{5564BF28-80EE-43A6-8E81-553EB5C7EF19}</Project>
+      <Name>ParalellTargetsLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="schema.yafms">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
