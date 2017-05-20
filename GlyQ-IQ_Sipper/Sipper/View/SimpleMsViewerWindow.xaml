@@ -1,0 +1,211 @@
+﻿<Window x:Class="Sipper.View.SimpleMsViewerWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:oxy="http://oxyplot.codeplex.com"
+        xmlns:VM="clr-namespace:Sipper.ViewModel" Title="SimpleMsViewerWindow" Name="window" mc:Ignorable="d"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" d:DesignHeight="535" d:DesignWidth="1093"
+        SizeToContent="WidthAndHeight">
+  <Window.DataContext>
+    <VM:SimpleMsViewerViewModel></VM:SimpleMsViewerViewModel>
+  </Window.DataContext>
+
+  <Window.Resources>
+    <Style TargetType="Border">
+      <Setter Property="Control.BorderBrush" Value="SlateGray" />
+      <Setter Property="Control.BorderThickness" Value="3" />
+      <Setter Property="Control.VerticalAlignment" Value="Stretch" />
+      <Setter Property="Control.HorizontalAlignment" Value="Stretch" />
+      <Setter Property="Control.Margin" Value="3,3,3,3" />
+      <Setter Property="Border.CornerRadius" Value="5" />
+
+    </Style>
+
+    <Style TargetType="Button">
+      <Setter Property="Control.BorderBrush" Value="SlateGray" />
+      <Setter Property="Control.VerticalAlignment" Value="Stretch" />
+      <Setter Property="Control.HorizontalAlignment" Value="Stretch" />
+      <Setter Property="Control.Margin" Value="3,3,3,3" />
+
+
+    </Style>
+
+        <Style x:Key="CellRightAlign">
+            <Setter Property="Control.HorizontalAlignment"
+            Value="Right" />
+        </Style>
+
+    </Window.Resources>
+  <DockPanel>
+
+    <Border Margin="6">
+            <TabControl>
+                <TabItem Header="View data">
+                    <StackPanel>
+        <StackPanel HorizontalAlignment="Stretch" MaxWidth="{Binding Path= Width, ElementName=grid1}">
+          <Button Name="btnOpenDataset" Height="50" Margin="15,5,15,5" Click="btnOpenDataset_Click">
+            <StackPanel>
+              <TextBlock HorizontalAlignment="Center">Open a dataset</TextBlock>
+              <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="{Binding DatasetName, Mode=OneWay}"
+                       IsReadOnly="True" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="10" CaretBrush="#4AB2CCB9"></TextBox>
+            </StackPanel>
+          </Button>
+                    <ProgressBar Margin="15,0,15,0" Height="8" Foreground="#FF4DB146" Background="#FFE5EDFC"
+                           BorderBrush="#FF436396" Value="{Binding PercentProgress}"></ProgressBar>
+                    <TextBlock Margin="15,0,15,5" Text="{Binding GeneralStatusMessage}" TextWrapping="WrapWithOverflow"></TextBlock>
+        </StackPanel>
+
+                <Border>
+                    <Grid Name="grid1" Height="125" HorizontalAlignment="Left" VerticalAlignment="Top">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+          </Grid.ColumnDefinitions>
+
+          <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="0.5*"></RowDefinition>
+          </Grid.RowDefinitions>
+
+          <Button Name="btnNavigateUp" Grid.Column="0" Grid.Row="0" Click="btnNavigateUpClick">
+            <Image Grid.Column="0" Grid.Row="0" Source="/Sipper;component/Images/arrow-up-icon.png"
+                   MaxHeight="20" MaxWidth="20"></Image>
+          </Button>
+          <Button Grid.Column="0" Grid.Row="1" Click="btnNavigateDownClick">
+            <Image Grid.Column="0" Grid.Row="0" Source="/Sipper;component/Images/arrow-down-icon.png"
+                   MaxHeight="20" MaxWidth="20"></Image>
+          </Button>
+
+
+          <TextBlock VerticalAlignment="Center" Grid.Column="1" Grid.Row="0" Grid.RowSpan="1" Margin="8"
+                     FontSize="14">Current Scan</TextBlock>
+          <TextBox Name="txtCurrentScan" VerticalAlignment="Center" Grid.Column="2" Grid.Row="0" Grid.RowSpan="1"
+                   FontSize="14" Text="{Binding CurrentLcScan}" LostFocus="NavigateToSpecificScanEvent" MouseWheel="TextBox_MouseWheel"></TextBox>
+
+          <TextBlock VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" Grid.RowSpan="1" Margin="8,8,2,8"
+                     FontSize="14">m/z range</TextBlock>
+          <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal">
+            <TextBox Name="txtMsGraphMinX" VerticalAlignment="Center" Margin="8,0,2,0" FontSize="14"
+                     Text="{Binding MSGraphMinX, StringFormat=0.00}" MouseWheel="MsGraphMinMouseWheelEvent"></TextBox>
+            <TextBlock VerticalAlignment="Center" Margin="0,0,2,0">-</TextBlock>
+            <TextBox Name="txtMsGraphMaxX" VerticalAlignment="Center" Margin="2,0,8,0" FontSize="14"
+                     Text="{Binding MSGraphMaxX, StringFormat=0.00}" MouseWheel="MsGraphMaxMouseWheelEvent"></TextBox>
+
+          </StackPanel>
+
+          <TextBlock VerticalAlignment="Center" Grid.Column="1" Grid.Row="2" Grid.RowSpan="1" FontSize="14">Num Summed</TextBlock>
+
+          <TextBox Name="txtNumMsSummed" VerticalAlignment="Center" Grid.Column="2" Grid.Row="2" Grid.RowSpan="1"
+                   FontSize="14" Text="{Binding NumMSScansToSum }" MouseWheel="txtNumMsSummed_MouseWheel"  LostFocus="NavigateToSpecificScanEvent"></TextBox>
+
+
+          <Slider Name="slider" Value="{Binding CurrentLcScan}" Minimum="{Binding MinLcScan}"
+                  Maximum="{Binding MaxLcScan }" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" ValueChanged="slider_ValueChanged"></Slider>
+
+
+        </Grid>
+                </Border>
+
+                <Border>
+                    <Expander Header="MS Peaks" IsExpanded="True">
+                    <DataGrid Name="msPeaksDatagrid" MaxHeight="300" AutoGenerateColumns="False" ItemsSource="{Binding Path=Peaks}" 
+                              HorizontalGridLinesBrush="SlateGray" VerticalGridLinesBrush="SlateGray" SelectionChanged="msPeaksDatagrid_SelectionChanged">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding Path=XValue, StringFormat=0.0000}" Header="m/z" />
+                                <DataGridTextColumn ElementStyle="{StaticResource CellRightAlign}" Binding="{Binding Path=Height, StringFormat=0.0}" Header="intensity" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    </Expander>
+                </Border>
+
+                <Border>
+                    <Expander Header="Extracted Ion Chromatogam" IsExpanded="True">
+                        <oxy:Plot Height="200" Margin="6,10,0,0" Model="{Binding ChromatogramPlot }" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                        </oxy:Plot>
+                    </Expander>
+                </Border>
+            </StackPanel>
+                </TabItem>
+                <TabItem Header="Options">
+                    <TabItem.Resources>
+                        <Style TargetType="TextBox">
+                            <Setter Property="Control.BorderBrush" Value="SlateGray" />
+                            <Setter Property="Control.BorderThickness" Value="2" />
+                            <Setter Property="Control.VerticalAlignment" Value="Stretch" />
+                            <Setter Property="Control.HorizontalAlignment" Value="Stretch" />
+                            <Setter Property="Control.Margin" Value="3,3,3,3" />
+                            <Setter Property="Border.CornerRadius" Value="5" />
+
+                        </Style>
+
+                        <Style TargetType="TextBlock">
+                            <Setter Property="Control.BorderBrush" Value="SlateGray" />
+                            <Setter Property="Control.BorderThickness" Value="1" />
+                            <Setter Property="Control.VerticalAlignment" Value="Center" />
+                            <Setter Property="Control.HorizontalAlignment" Value="Stretch" />
+                            <Setter Property="Control.Margin" Value="3,3,3,3" />
+                            <Setter Property="Border.CornerRadius" Value="5" />
+
+                        </Style>
+
+                        <Style TargetType="CheckBox">
+                            <Setter Property="Control.BorderBrush" Value="SlateGray" />
+                            <Setter Property="Control.BorderThickness" Value="1" />
+                            <Setter Property="Control.VerticalAlignment" Value="Center" />
+                            <Setter Property="Control.HorizontalAlignment" Value="Stretch" />
+                            <Setter Property="Control.Margin" Value="3,3,3,3" />
+                            <Setter Property="Border.CornerRadius" Value="5" />
+                        </Style>
+
+                    </TabItem.Resources>
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock>Show MS/MS data</TextBlock>
+                            <CheckBox IsChecked="{Binding ShowMsMsSpectra}"></CheckBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Line StrokeThickness="4"  HorizontalAlignment="Center" Width="50" Stroke="SlateGray" ></Line>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock>ChromSourceCreatorPeakBR</TextBlock>
+                            <TextBox Text="{Binding ChromSourcePeakDetectorPeakBr}"></TextBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock>ChromSourceCreatorSigNoiseThreshold</TextBlock>
+                            <TextBox Text="{Binding ChromSourcePeakDetectorSigNoise}"></TextBox>
+                        </StackPanel>
+                       
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock>MS peak detector peak BR</TextBlock>
+                            <TextBox Text="{Binding PeakDetector.PeakToBackgroundRatio}"></TextBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock>MS peak detector SigNoiseThreshold</TextBlock>
+                            <TextBox Text="{Binding PeakDetector.SignalToNoiseThreshold}"></TextBox>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <Line StrokeThickness="4"  HorizontalAlignment="Center" Width="50" Stroke="SlateGray" ></Line>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <Button Name="btnReCreatePeaksFile" HorizontalAlignment="Stretch" Click="btnReCreatePeaksFile_Click">Re-create peaks file</Button>
+                        </StackPanel>
+
+                    </StackPanel>
+                </TabItem>
+            </TabControl>
+        </Border>
+    <Border HorizontalAlignment="Stretch">
+      <oxy:Plot Name="msPlot" Margin="6,10,0,0" Model="{Binding ObservedIsoPlot }" VerticalAlignment="Stretch"
+                HorizontalAlignment="Stretch" >
+        <oxy:Plot.Axes>
+          <oxy:LinearAxis Position="Bottom" AbsoluteMinimum="{Binding MSGraphMinX}"></oxy:LinearAxis>
+          <oxy:LinearAxis Position="Bottom" AbsoluteMaximum="{Binding MSGraphMaxX}"></oxy:LinearAxis>
+        </oxy:Plot.Axes>
+      </oxy:Plot>
+    </Border>
+  </DockPanel>
+</Window>
