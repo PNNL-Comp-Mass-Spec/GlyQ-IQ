@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Synthetic Spectra DLL X64 Net 4", "Synthetic Spectra DLL X64 Net 4\Synthetic Spectra DLL X64 Net 4.csproj", "{E5C604F6-1E05-4C6F-B80A-C40794CB89A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyntheticSpectra X64 Net4 Test", "SyntheticSpectra X64 Net4 Test\SyntheticSpectra X64 Net4 Test.csproj", "{C71C20D9-468A-4570-ABF5-3282B9EE9959}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E5C604F6-1E05-4C6F-B80A-C40794CB89A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5C604F6-1E05-4C6F-B80A-C40794CB89A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5C604F6-1E05-4C6F-B80A-C40794CB89A5}.Debug|x64.ActiveCfg = Debug|x64
+		{E5C604F6-1E05-4C6F-B80A-C40794CB89A5}.Debug|x64.Build.0 = Debug|x64
+		{E5C604F6-1E05-4C6F-B80A-C40794CB89A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5C604F6-1E05-4C6F-B80A-C40794CB89A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5C604F6-1E05-4C6F-B80A-C40794CB89A5}.Release|x64.ActiveCfg = Release|x64
+		{E5C604F6-1E05-4C6F-B80A-C40794CB89A5}.Release|x64.Build.0 = Release|x64
+		{C71C20D9-468A-4570-ABF5-3282B9EE9959}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C71C20D9-468A-4570-ABF5-3282B9EE9959}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C71C20D9-468A-4570-ABF5-3282B9EE9959}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C71C20D9-468A-4570-ABF5-3282B9EE9959}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C71C20D9-468A-4570-ABF5-3282B9EE9959}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C71C20D9-468A-4570-ABF5-3282B9EE9959}.Release|x64.ActiveCfg = Release|Any CPU
+		{C71C20D9-468A-4570-ABF5-3282B9EE9959}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
