@@ -1,0 +1,290 @@
+﻿<Page x:Class="GlycolyzerGUI.ParametersSubHomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="400"
+      MinHeight="400" MinWidth="400"
+      Height="Auto" Width="Auto" 
+	Title="ParametersSubHomePage">
+
+    <!--Tabs-->
+    <TabControl Name="parametersTabs" TabStripPlacement="Top" Background="PaleVioletRed" BorderBrush="DarkBlue" SelectionChanged="Tabs_SelectionChanged">
+        <!--1st Tab with Libraries Information-->
+        <TabItem Header="Libraries" IsSelected="True">
+            <!--3 Row Main Grid for Tab 1-->
+            <Grid>
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70" />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                
+                
+                <!--"Choose a Library to Upload" Label in 1st Row-->
+                <Label Grid.Row="0" Content="Choose a Library to upload." Style="{StaticResource directionsLabelTextStyle}" />
+ 
+                
+                <!--"Default Library" Label in 2nd Row-->
+                <Label Grid.Row="1" Content="Default Library:" Margin="0,0,0,30" 
+                       Style="{StaticResource leftLineLabelTextStyle}" />
+                    
+                <!--Default Library Choice Combobox in 2nd Row SelectedValue="{Binding Path=ChosenDefaultLibrary_String}"-->
+                <ComboBox Grid.Row="1" Name="defaultLibrariesComboBox" Height="23" Width="230" Margin="10,20,0,0"
+                          HorizontalAlignment="Left" VerticalAlignment="Center" IsEditable="true" IsReadOnly="true"
+                          SelectionChanged="defaultLibrariesComboBox_SelectionChanged">
+                    <ComboBoxItem Content="No Library Selected"></ComboBoxItem>
+                    <ComboBoxItem Content="NLinked_Alditol"></ComboBoxItem>
+                    <ComboBoxItem Content="NLinked_Alditol_2ndIsotope"></ComboBoxItem>
+                    <ComboBoxItem Content="NLinked_Aldehyde"></ComboBoxItem>
+                    <ComboBoxItem Content="Cell_Alditol"></ComboBoxItem>
+                    <ComboBoxItem Content="Cell_Alditol_V2"></ComboBoxItem>
+                    <ComboBoxItem Content="Cell_Alditol_Vmini"></ComboBoxItem>
+                    <ComboBoxItem Content="Ant_Alditol"></ComboBoxItem>
+                    <ComboBoxItem Content="NonCalibrated"></ComboBoxItem>
+                    <ComboBoxItem Content="NLinked_Alditol_PolySA"></ComboBoxItem>
+                    <ComboBoxItem Content="NLinked_Alditol8"></ComboBoxItem>
+                    <ComboBoxItem Content="NLinked_Alditol9"></ComboBoxItem>
+                    <ComboBoxItem Content="Hexose"></ComboBoxItem>
+                </ComboBox>
+
+                <!--Upload Button to Upload Chosen Default Library in 3rd Row-->
+                <Button Grid.Row="1" Content="Upload" Name="uploadDefaultLibraryButton" Width="80" Height="25" 
+                        HorizontalAlignment="Center" VerticalAlignment="Center" Margin="240,20,0,0"
+                        Click="uploadDefaultLibraryButton_Click" />
+
+
+                <!--2 Column Grid for 3rd Row-->
+                <Grid Grid.Row="2" Grid.RowSpan="2">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="250" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    
+                    <!--"Custom Library" Label in 3rd Row-->
+                    <Label Grid.Row="2" Content="Custom Library:" Margin="0,0,0,30" 
+                           Style="{StaticResource leftLineLabelTextStyle}" />
+                    
+                    <!--File Field to Find a Custom Library File to Upload in 4th Row Text="{Binding Path=ChosenCustomLibrary_String}"-->
+                    <TextBox Grid.Row="0" Grid.Column="0" Name="customLibraryBrowseTextBox" HorizontalAlignment="Left" 
+                             VerticalAlignment="Center" Margin="10,20,0,0" Width="239"
+                             TextChanged="customLibraryBrowseTextBox_TextChanged" />
+
+                    <!--Browse Button to Find Custom Libraries to Upload in 3rd Row-->
+                    <Button Grid.Row="0" Grid.Column="1" Content="Browse" Name="customLibraryBrowseButton" Width="80" 
+                            Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"
+                            Click="customLibraryBrowseButton_Click" />
+
+                    <!--Upload Button to Upload Chosen Default Library in 3rd Row
+                    <Button Grid.Row="0" Grid.Column="1" Content="Upload" Name="uploadCustomLibraryButton" Width="80" 
+                            Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,60,0,0"
+                            Click="uploadCustomLibraryButton_Click" />-->
+
+                </Grid>
+            </Grid>
+        </TabItem>
+        
+        
+        <!--2nd Tab with OmniFinder Stuff *Loaded *Initialized-->
+        <TabItem Header="OmniFinder" Name="Tab2" Loaded="Tab2_Loaded"></TabItem>
+        
+        
+        <!--3rd Tab with Extra Science Parameters-->
+        <TabItem Header="Extra Parameters">
+            <!--5 Row Main Grid for Tab 3-->
+            <Grid>
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                
+                <!--"Extra Science Parameters" Label in 1st Row-->
+                <Label Grid.Row="0" Content="Extra Science Parameters" Style="{StaticResource directionsLabelTextStyle}" />
+
+                
+                <!--2 Column Grid for 2nd, 3rd, 4th, and 5th Rows-->
+                <Grid Grid.Row="1" Grid.RowSpan="4">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    
+                    <!--"Number of Charges" Label in 2nd Row-->
+                    <Label Grid.Row="0" Grid.Column="0" Content="Number of Charges:" 
+                           Style="{StaticResource rightLineLabelTextStyle}" />
+
+                    <!--Number of Charges Text Box in 2nd Row Text="{Binding Path=NumberOfChargesExtraParameter_Int}"-->
+                    <TextBox Grid.Row="0" Grid.Column="1" Name="numberOfChargesTextBox" HorizontalAlignment="Left" 
+                             VerticalAlignment="Center" Margin="10,0,0,0" Width="30"
+                             TextChanged="customLibraryBrowseTextBox_TextChanged" />
+
+                    
+                    <!--"m/z Tolerance" Label in 3rd Row-->
+                    <Label Grid.Row="1" Grid.Column="0" Content="m/z Tolerance:" 
+                           Style="{StaticResource rightLineLabelTextStyle}" />
+
+                    <!--m/z Tolerance Text Box in 3rd Row Text="{Binding Path=MzToleranceExtraParameter_Double}"-->
+                    <TextBox Grid.Row="1" Grid.Column="1" Name="mzToleranceTextBox" HorizontalAlignment="Left" 
+                             VerticalAlignment="Center" Margin="10,0,0,0" Width="60"
+                             TextChanged="customLibraryBrowseTextBox_TextChanged" />
+
+                    <!--m/z Tolerance Combobox in 3rd Row SelectedValue="{Binding Path=MzToleranceTypeExtraParameter_String}"-->
+                    <ComboBox Grid.Row="1" Grid.Column="1" Name="mzToleranceComboBox"  Height="23" HorizontalAlignment="Center" 
+                              VerticalAlignment="Center" Width="60" Margin="30,0,0,0" IsEditable="true" 
+                              IsReadOnly="true" 
+                              SelectionChanged="defaultLibrariesComboBox_SelectionChanged">
+                        <ComboBoxItem Content="ppm"></ComboBoxItem>
+                        <ComboBoxItem Content="Da"></ComboBoxItem>
+                    </ComboBox>
+
+                    
+                    <!--"Carbohydrate Type" Label in 4th Row-->
+                    <Label Grid.Row="2" Grid.Column="0" Content="Carbohydrate Type:" 
+                           Style="{StaticResource rightLineLabelTextStyle}" />
+
+                    <!--Carbohydrate Type Combobox in 4th Row SelectedValue="{Binding Path=CarbohydrateTypeExtraParameter_String}"-->
+                    <ComboBox Grid.Row="2" Grid.Column="1" Name="carbohydrateTypeExtraScienceParametersComboBox"  Height="23" 
+                              HorizontalAlignment="Left" VerticalAlignment="Center" Width="120" Margin="10,0,0,0"  
+                              IsEditable="true" IsReadOnly="true"
+                              SelectionChanged="defaultLibrariesComboBox_SelectionChanged">
+                        <ComboBoxItem Content="Aldehyde"></ComboBoxItem>
+                        <ComboBoxItem Content="Alditol"></ComboBoxItem>
+                        <ComboBoxItem Content="Fragment"></ComboBoxItem>
+                    </ComboBox>
+
+                    
+                    <!--"Charge Carrying Species" Label in 5th Row-->
+                    <Label Grid.Row="3" Grid.Column="0" Content="Charge Carrying Species:" 
+                           Style="{StaticResource rightLineLabelTextStyle}" />
+
+                    <!--Charge Carrying Species Combobox in 5th Row SelectedValue="{Binding Path=ChargeCarryingSpeciesExtraParameter_String}"-->
+                    <ComboBox Grid.Row="3" Grid.Column="1" Name="chargeCarryingSpeciesExtraScienceParameterComboBox"  
+                              Height="23" HorizontalAlignment="Left" VerticalAlignment="Center" Width="100" Margin="10,0,0,0"  
+                              IsEditable="true" IsReadOnly="true"
+                              SelectionChanged="defaultLibrariesComboBox_SelectionChanged">
+                        <ComboBoxItem Content="H"></ComboBoxItem>
+                        <ComboBoxItem Content="Na"></ComboBoxItem>
+                        <ComboBoxItem Content="K"></ComboBoxItem>
+                        <ComboBoxItem Content="-H"></ComboBoxItem>
+                        <ComboBoxItem  Content="NH4"></ComboBoxItem>
+                        <ComboBoxItem Content="Water"></ComboBoxItem>
+                        <ComboBoxItem Content="Neutral"></ComboBoxItem>
+                        <ComboBoxItem Content="User Defined"></ComboBoxItem>
+                    </ComboBox>
+                </Grid>        
+            </Grid>
+        </TabItem>
+
+
+        <!--4th Tab with Parameter Ranges-->
+        <TabItem Header="Ranges" Name="Tab4" Loaded="Tab4_Loaded"></TabItem>
+
+
+        <!--5th Tab with Feature Type, Input Folder, and Output Folder Information-->
+        <TabItem Header="Finish and Save">
+            
+            <Grid>
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                
+                <!--"Input/Output Data Folder" Label in 1st Row-->
+                <Label Grid.Row="0" Content="Input/Output Data Folders" Margin="0,0,0,20"
+                       Style="{StaticResource directionsLabelTextStyle}" />
+                <!--"and Save Location Information" Label in 1st Row-->
+                <Label Grid.Row="0" Content="and Save Location Information" Margin="0,20,0,0"
+                       Style="{StaticResource directionsLabelTextStyle}" />
+
+                
+                <Grid Grid.Row="1" Grid.RowSpan="3">
+                    
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="250" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    
+                    <!--"Input Data Folder" Label in 1st Row-->
+                    <Label Grid.Row="0" Grid.Column="0" Content="Input Data Folder:" Margin="0,0,0,30"
+                           Style="{StaticResource leftLineLabelTextStyle}" />
+
+                    <!--File Field to Find an Input Data Folder to Save the Input to be Used by the Glycolyzer in 2nd Row Text="{Binding Path=InputDataFolder_String}"-->
+                    <TextBox Grid.Row="0" Grid.Column="0" Name="inputDataFolderBrowseTextBox" HorizontalAlignment="Left" 
+                             VerticalAlignment="Center" Margin="10,20,0,0" Width="239"
+                             TextChanged="customLibraryBrowseTextBox_TextChanged" />
+
+                    <!--Browse Button for Input Data Folder in 2nd Row-->
+                    <Button Grid.Row="0" Grid.Column="1" Content="Browse" Name="inputDataFolderBrowseButton" Width="80" 
+                            Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"
+                            Click="inputDataFolderBrowseButton_Click" />
+
+
+                    <!--"Output Data Folder" Label in 1st Row-->
+                    <Label Grid.Row="1" Grid.Column="0" Content="Output Data Folder:" Margin="0,0,0,30"
+                           Style="{StaticResource leftLineLabelTextStyle}" />
+
+                    <!--File Field to Find an Output Data Folder to Save the Results from the Glycolyzer in 3rd Row Text="{Binding Path=OutputDataFolder_String}"-->
+                    <TextBox Grid.Row="1" Grid.Column="0" Name="outputDataFolderBrowseTextBox" HorizontalAlignment="Left" 
+                             VerticalAlignment="Center" Margin="10,20,0,0" Width="239"
+                             TextChanged="customLibraryBrowseTextBox_TextChanged" />
+
+                    <!--Browse Button for Output Data Folder in 3rd Row-->
+                    <Button Grid.Row="1" Grid.Column="1" Content="Browse" Name="outputDataFolderBrowseButton" Width="80" 
+                            Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"
+                            Click="outputDataFolderBrowseButton_Click" />
+
+
+                    <!--"Save Location Folder" Label in 1st Row-->
+                    <Label Grid.Row="2" Grid.Column="0" Content="Save Location Folder:" Margin="0,0,0,30"
+                           Style="{StaticResource leftLineLabelTextStyle}" />
+
+                    <!--File Field to Find a Save Location Folder to Save Progress in 4th Row Text="{Binding Path=SaveLocationFolder_String}"-->
+                    <TextBox Grid.Row="3" Grid.Column="0" Name="saveLocationFolderBrowseTextBox" HorizontalAlignment="Left" 
+                             VerticalAlignment="Center" Margin="10,20,0,0" Width="239"
+                             TextChanged="customLibraryBrowseTextBox_TextChanged" />
+                    
+                    <!--Browse Button for Save Location Folder in 4th Row-->
+                    <Button Grid.Row="3" Grid.Column="1" Content="Browse" Name="saveLocationFolderBrowseButton" Width="80" 
+                            Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0"
+                            Click="saveLocationFolderBrowseButton_Click" />
+                    
+                    <!--Save Button to Save Progress to Chosen Save Location Folder in 4th Row-->
+                    <Button Grid.Row="3" Grid.Column="1" Content="Save" Name="saveLocationFolderSaveButton" Width="80" 
+                            Height="25" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,10"
+                            Click="saveLocationFolderSaveButton_Click" />
+
+                </Grid>
+            </Grid>
+        </TabItem>
+        
+    </TabControl>
+</Page>

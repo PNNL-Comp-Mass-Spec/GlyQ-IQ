@@ -1,0 +1,36 @@
+﻿<Page x:Class="GlycolyzerGUI.UtilitiesSubHomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="400"
+	Title="UtilitiesSubHomePage">
+
+    <!--3 Row Main Grid
+    <Grid Background="LightBlue">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>-->
+
+        
+        <!--"Utilities Home" Label in 1st Row
+        <Label Grid.Row="0" Content="Utilities Home" Style="{StaticResource headerLabelTextStyle}" />-->
+
+        
+        <!--Glycan Maker Button in 2nd Row
+        <Button Grid.Row="1" Name="glycanMakerButton" Content="Glycan Maker" Style="{StaticResource directorButtonStyle}" 
+                Click="glycanMakerButton_Click" />-->
+
+        
+        <!--OmniFinder Button in 3rd Row
+        <Button Grid.Row="2" Name="omniFinderButton" Style="{StaticResource directorButtonStyle}" 
+                Click="omniFinderButton_Click">
+            <TextBlock>OmniFinder/<LineBreak/>Glycan Maker</TextBlock>
+        </Button>
+
+    </Grid>-->
+</Page>
