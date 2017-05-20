@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C7E73486-451F-4653-993A-0A045A54D07A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DeconX64</RootNamespace>
+    <AssemblyName>DeconX64</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Fast DLL\X64 DeconSelect\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\Fast DLL\X64 DeconSelect\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DeconTools.Backend">
+      <HintPath>U:\DLL_Files\Fast_DLL\X64 DeconTools Net4\DeconTools.Backend.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>U:\DLL_Files\Fast_DLL\X86 DeconTools Net 4\x86\Release\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BasicChromPeakSelector.cs" />
+    <Compile Include="BasicIqTargetImporter.cs" />
+    <Compile Include="BasicTargetedWorkflowParameters.cs" />
+    <Compile Include="ChromPeakAnalyzer.cs" />
+    <Compile Include="DeuteratedTargetedResultDTO.cs" />
+    <Compile Include="IqTargetImporter.cs" />
+    <Compile Include="Modified\ChromPeakSelectorBase.cs" />
+    <Compile Include="ChromPeakSelectorParameters.cs" />
+    <Compile Include="ChromPeakUtilities.cs" />
+    <Compile Include="DeconToolsResultDTO.cs" />
+    <Compile Include="Globals.cs" />
+    <Compile Include="IQChargeStateTarget.cs" />
+    <Compile Include="IqChromCorrelator.cs" />
+    <Compile Include="IqChromCorrelatorBase.cs" />
+    <Compile Include="IqCodeParser.cs" />
+    <Compile Include="IqLabelFreeResultExporter.cs" />
+    <Compile Include="IqLogger\IqLogger.cs" />
+    <Compile Include="IQResult.cs" />
+    <Compile Include="IqResultDetail.cs" />
+    <Compile Include="IqResultExporter.cs" />
+    <Compile Include="IQTarget.cs" />
+    <Compile Include="IqTargetBasic.cs" />
+    <Compile Include="IQTargetUtilities.cs" />
+    <Compile Include="IQWorkflow.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="Logger_Importer.cs" />
+    <Compile Include="N14N15TargetedResultDTO.cs" />
+    <Compile Include="N14N15Workflow2Parameters.cs" />
+    <Compile Include="O16O18TargetedResultDTO.cs" />
+    <Compile Include="O16O18WorkflowParameters.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResultDTOFactory.cs" />
+    <Compile Include="SipperLcmsFeatureTargetedResultDTO.cs" />
+    <Compile Include="SipperTargetedWorkflowParameters.cs" />
+    <Compile Include="SmartChromPeakSelectorParameters.cs" />
+    <Compile Include="TargetedAlignerWorkflowParameters.cs" />
+    <Compile Include="TargetedResultDTO.cs" />
+    <Compile Include="TargetedResultFromTextImporter.cs" />
+    <Compile Include="TargetedResultRepository.cs" />
+    <Compile Include="TargetedWorkflowParameters.cs" />
+    <Compile Include="TopDownTargetedResultDTO.cs" />
+    <Compile Include="TopDownTargetedWorkflowParameters.cs" />
+    <Compile Include="Modified\WorkflowParameters.cs" />
+    <Compile Include="UnlabelledTargetedResultDTO.cs" />
+    <Compile Include="UnlabelledTargetedResultFromTextImporter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
