@@ -75,6 +75,7 @@ NoiseFinder2/NoiseFinder/MyFirstDLL/xerces-c_2_7D.dll
 OrbitrapPeakDetector/OrbitrapPeakThresholder/Deisotoping/xerces-c_2_7.dll
 OrbitrapPeakDetector/OrbitrapPeakThresholder/Deisotoping/xerces-c_2_7D.dll
 /PeakDetector/Copy of DLLS
+/PeakDetector/Copy of Test File
 /PeakDetector/PeakDetector/xerces-c_2_7D.dll
 /PeakDetector/PeakDetector/IMSCOMP.dll
 /PeakDetector/PeakDetector/xerces-c_2_7.dll
@@ -105,3 +106,80 @@ YAFMSConverter_Source_Code/raw2yafms/IMSCOMP.dll
 YAFMSConverter_Source_Code/raw2yafms/Interop.XRAWFILE2Lib.dll
 YAFMSConverter_Source_Code/raw2yafms/XRawfile2.dll
 YAFMS-DB/YAFMS-DB/X86 Working/YAFMS-DB-X86/YAFMS-DB-X86/System.Data.SQLite.dll
+/Example_WorkDir_HPC/Example_WorkDir_ApplicationFiles.zip
+/Example_WorkDir_HPC/Example_WorkDir_RawData.zip
+/GlycolyzerGUImvvm2
+/LoaderClassLibrary1DLL
+/locks
+/Run/Run/MSFileReader_Reference.pdf
+/X86 DeconTools Net 4/Capture.PNG
+/0_Libraries/L_Ant+2XyloseNeutralAlditol Info.txt
+/0_Libraries/L_Ant+2XyloseNeutralAlditol.txt
+/0_Libraries/L_AntLibraryDirectoryWorkAlditol_Xylose.txt
+/0_Libraries/L_CellLibraryDirectoryWorkAlditol.txt
+/0_Libraries/L_CellLibraryDirectoryWorkAlditolV2.txt
+/0_Libraries/L_CellLibraryDirectoryWorkAlditolVmini.txt
+/0_Libraries/L_CellLibraryNeutralAlditol Info.txt
+/0_Libraries/L_CellLibraryNeutralAlditol.txt
+/0_Libraries/L_CellLibraryNeutralAlditolV2 Info.txt
+/0_Libraries/L_CellLibraryNeutralAlditolV2.txt
+/0_Libraries/L_CellLibraryNeutralAlditolVmini Info.txt
+/0_Libraries/L_CellLibraryNeutralAlditolVmini.txt
+/0_Libraries/L_Hexose Info.txt
+/0_Libraries/L_Hexose.txt
+/0_Libraries/L_HexoseDirectoryWork.txt
+/0_Libraries/L_13_Alditol_No_PSA_R.txt
+/0_Libraries/L_13_HighMannose_TargetsFirstAll.txt
+/0_Libraries/L_PSA21_LactoneOnly.txt
+/0_Libraries/L_10_HighMannose_TargetsFirstAll.txt
+/0_Libraries/L_10_PSA21_Cell_TargetsFirstAll_R.txt
+/0_Libraries/L_PSA21_IQ_MuddimanH.txt
+/0_Libraries/L_10_IQ_MuddimanTargetsH.txt
+/0_Libraries/L_10_IQ_MuddimanTargetsL.txt
+/0_Libraries/L_7 All NeAlditolSA16_I.txt
+/0_Libraries/L_10_LibraryAlditol_I.txt
+/0_Libraries/DB_Xylose_4_Alditol_Neutral.xml
+/0_Libraries/GlycolyzerLibraryDirectorCDrive.txt
+/0_Libraries/GlycolyzerLibraryDirectorEDrive.txt
+/0_Libraries/L_AntLibraryDirectoryWorkAlditol_XyloseOnly_E.txt
+/0_Libraries/DB_Xylose_15_Alditol_Neutral.xml
+/0_Libraries/L_AntLibraryDirectoryWorkAlditol_XyloseOnly.txt
+/0_Libraries/L_AntXyloseNeutralAlditol Info.txt
+/0_Libraries/L_AntXyloseNeutralAlditol.txt
+/0_Libraries/DB_Hexose_15_Alditol_Neutral.xml
+/0_Libraries/L_HexoseDirectoryWork_E.txt
+/0_Libraries/L_AntLibraryDirectoryWorkAlditol_Xylose_E.txt
+/0_Libraries/DB_Ant_Alditol_15_Alditol_Neutral.xml
+/0_Libraries/L_CellLibraryDirectoryWorkAlditolV2_E.txt
+/0_Libraries/DB_Cell_Alditol_V2_15_Alditol_Neutral.xml
+/0_Libraries/DB_NLinked_Alditol_PolySA_15_Alditol_Neutral.xml
+/0_Libraries/L_7LibraryDirectoryAlditol+SA16 Work_E.txt
+/0_Libraries/L_1DiagnosticIons Directory_E.txt
+/0_Libraries/DB_NLinked_Alditol10_15_Alditol_Neutral.xml
+/0_Libraries/L_10LibraryDirectoryAlditol Work_E.txt
+/0_Libraries/L_1DiagnosticIons.txt
+/0_Libraries/DiagnosticIons.xls
+/0_Libraries/L_1DiagnosticIons Directory.txt
+/0_Libraries/L_1DiagnosticIons Info.txt
+/0_Libraries/L_6 All NeutralAldehyde Info.txt
+/0_Libraries/L_6 All NeutralAldehyde.txt
+/0_Libraries/L_6LibraryDirectoryWorkAldehyde.txt
+/0_Libraries/L_7 All NeutralAlditol Info.txt
+/0_Libraries/L_7 All NeutralAlditol.txt
+/0_Libraries/L_7 All NeutralAlditol+2ndIsotope Info.txt
+/0_Libraries/L_7 All NeutralAlditol+2ndIsotope.txt
+/0_Libraries/L_7 All NeutralAlditol+SA16 Info.txt
+/0_Libraries/L_7 All NeutralAlditol+SA16.txt
+/0_Libraries/L_7LibraryDirectoryAlditol+SA16 Work.txt
+/0_Libraries/L_7LibraryDirectoryWorkAlditol.txt
+/0_Libraries/L_7LibraryDirectoryWorkAlditol+2nsIsotope.txt
+/0_Libraries/L_8LibraryAlditol Info.txt
+/0_Libraries/L_8LibraryAlditol.txt
+/0_Libraries/L_8LibraryDirectoryWorkAlditol.txt
+/0_Libraries/L_9LibraryAlditol Info.txt
+/0_Libraries/L_9LibraryAlditol.txt
+/0_Libraries/L_9LibraryDirectoryAlditol Work.txt
+/0_Libraries/L_10_LibraryAlditol Info.txt
+/0_Libraries/L_10_LibraryAlditol.txt
+/0_Libraries/L_10LibraryDirectoryAlditol Work.txt
+/0_Libraries/L_Ant+2XyloseHexNeutralAlditol.txt
