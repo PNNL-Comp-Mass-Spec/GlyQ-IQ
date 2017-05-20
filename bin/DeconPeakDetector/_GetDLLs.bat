@@ -20,14 +20,14 @@ xcopy ..\..\HammerOrDeconSimplePeakDetector\Lib\IQGlyQ.dll /D /Y
 xcopy "..\..\X86 DeconTools Net 4\x86\Release\log4net.dll" /D /Y
 xcopy "..\..\X86 DeconTools Net 4\x86\Release\Mapack.dll" /D /Y
 xcopy "..\..\X86 DeconTools Net 4\x86\Release\MassSpecDataReader.dll" /D /Y
-xcopy "X86 MathNet\MathNet.Numerics.dll" /D /Y
-xcopy "X86 HammerSupport\MemoryOverloadProfilierX86.dll" /D /Y
+xcopy "..\..\X86 MathNet\MathNet.Numerics.dll" /D /Y
+xcopy "..\..\X86 HammerSupport\MemoryOverloadProfilierX86.dll" /D /Y
 xcopy "..\..\X86 DeconTools Net 4\x86\Release\MSDBLibrary.dll" /D /Y
 xcopy "..\..\X86 DeconTools Net 4\x86\Release\MultiAlignEngine.dll" /D /Y
 xcopy "..\..\X86 DeconTools Net 4\x86\Release\nunit.framework.dll" /D /Y
 xcopy "..\..\X86 OmniFinder\OmniFinder.dll" /D /Y
 xcopy ..\..\HammerOrDeconSimplePeakDetector\Lib\ParalellTargetsLibrary.dll /D /Y
-xcopy "X86 PNNL Omics\PNNLOmics.dll" /D /Y
+xcopy "..\..\X86 PNNL Omics\PNNLOmics.dll" /D /Y
 xcopy "..\..\X86 DeconTools Net 4\x86\Release\ProteowizardWrapper.dll" /D /Y
 xcopy "..\..\X86 DeconTools Net 4\x86\Release\pwiz_bindings_cli.dll" /D /Y
 xcopy ..\..\HammerOrDeconSimplePeakDetector\Lib\Run32.dll /D /Y
