@@ -1,0 +1,492 @@
+﻿<Page x:Class="GlycolyzerGUImvvm.Views.OmniFinderGMPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:vm="clr-namespace:GlycolyzerGUImvvm.ViewModels"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="635"
+      MinHeight="700" MinWidth="635"
+	Title="OmniFinderGMPage">
+
+    <Page.DataContext>
+        <vm:OmniFinderGMViewModel/>
+    </Page.DataContext>
+
+    <!--Canvas to Draw the Box Outlines On-->
+    <Canvas>
+        <Canvas.Background>
+            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                <GradientStop Color="Goldenrod" Offset="0.5"/>
+                <GradientStop Color="Crimson" Offset="1.0"/>
+            </LinearGradientBrush>
+        </Canvas.Background>
+        <!--3 Row Main Grid-->
+        <Grid MinHeight="700" MinWidth="630">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60*" />
+                <RowDefinition Height="600*" />
+                <RowDefinition Height="40*" />
+            </Grid.RowDefinitions>
+
+            <!--"OmniFinder" Label (Row 1)-->
+            <Label Grid.Row="0" Content="OmniFinder" Style="{StaticResource secondaryHeaderLabelTextStyle}" />
+            
+            <!--Reset Button-->
+            <Button Grid.Row="0" Name="reset_Button" Content="Reset" Margin="0,26,140,0" Style="{StaticResource optionButtonStyle}"
+                    Command="{Binding ButtonCommand}" CommandParameter="reset" />
+
+            <!--Select Options Combobox-->
+            <ComboBox Grid.Row="0" Name="selectOptionsComboBox"  Height="23" HorizontalAlignment="Center" 
+                      VerticalAlignment="Center" Width="140" Margin="110,26,0,0" IsEditable="true" IsReadOnly="true"
+                      ItemsSource="{StaticResource OmniFinderStrings}" DisplayMemberPath="ValueString" SelectedValuePath="ValueString" 
+                      SelectedValue="{Binding Path=OmniFinderGMModel.SelectedOption_String, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            
+
+            <!--MiniGrid (Row 2)-->
+            <Grid Grid.Row="1">
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="260*" />
+                    <RowDefinition Height="180*" />
+                    <RowDefinition Height="160*" />
+                </Grid.RowDefinitions>
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="290*" />
+                    <ColumnDefinition Width="340*" />
+                </Grid.ColumnDefinitions>
+
+
+                <!--"Sugars" Label (Row 1 x Col 1)-->
+                <Label Grid.Row="0" Content="Sugars" Style="{StaticResource tertiaryHeaderLabelTextStyle}" />
+
+                <!--Sugars White Outline-->
+                <Path Grid.Row="0" Stroke="White" StrokeThickness="2" Data="M 115,20 H 10 V 255 H 285 V 20 H 175" />
+
+                <!--Sugars CheckBoxes-->
+                <CheckBox Grid.Row="0" Name="hexose_UCheckBox" Margin="15,0,0,187" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedHexose_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="0" Name="hexNAc_UCheckBox" Margin="15,0,0,130" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedHexNAc_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="0" Name="dxyhex_UCheckBox" Margin="15,0,0,73" VerticalAlignment="Center"
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedDxyHex_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="0" Name="pentose_UCheckBox" Margin="15,0,0,16" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedPentose_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="0" Name="neuAc_UCheckBox" Margin="15,41,0,0" VerticalAlignment="Center"
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedNeuAc_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="0" Name="neuGc_UCheckBox" Margin="15,98,0,0" VerticalAlignment="Center"
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedNeuGc_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="0" Name="kDN_UCheckBox" Margin="15,155,0,0" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedKDN_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="0" Name="hexA_UCheckBox" Margin="15,212,0,0" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedHexA_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
+                <!--Sugars Labels-->
+                <Label Grid.Row="0" Content="Hexose (162.05282)" Margin="30,0,65,187" Style="{StaticResource blackLeftLineLabelTextStyle}" />
+                <Label Grid.Row="0" Content="HexNAc (203.07937)" Margin="30,0,0,130" Style="{StaticResource blackLeftLineLabelTextStyle}" />
+                <Label Grid.Row="0" Content="Deoxyhexose (146.05790)" Margin="30,0,0,73" Style="{StaticResource blackLeftLineLabelTextStyle}" />
+                <Label Grid.Row="0" Content="Pentose (132.04225)" Margin="30,0,0,16" Style="{StaticResource blackLeftLineLabelTextStyle}" />
+                <Label Grid.Row="0" Content="NeuAc (291.09541)" Margin="30,41,0,0" Style="{StaticResource blackLeftLineLabelTextStyle}" />
+                <Label Grid.Row="0" Content="NeuGc (307.09033)" Margin="30,98,0,0" Style="{StaticResource blackLeftLineLabelTextStyle}" />
+                <Label Grid.Row="0" Content="KDN (250.06886)" Margin="30,155,0,0" Style="{StaticResource blackLeftLineLabelTextStyle}" />
+                <Label Grid.Row="0" Content="HexA (176.03208)" Margin="30,212,0,0" Style="{StaticResource blackLeftLineLabelTextStyle}" />
+
+                <!--"#" Labels-->
+                <Label Grid.Row="0" Content="#" Margin="220,0,0,187" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Row="0" Content="#" Margin="220,0,0,130" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Row="0" Content="#" Margin="220,0,0,73" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Row="0" Content="#" Margin="220,0,0,16" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Row="0" Content="#" Margin="220,41,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Row="0" Content="#" Margin="220,98,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Row="0" Content="#" Margin="220,155,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Row="0" Content="#" Margin="220,212,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+
+                <!--Sugars Text Boxes-->
+                <TextBox Grid.Row="0" Name="Hexose_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="240,0,0,187" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfHexose_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Row="0" Name="HexNAc_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="240,0,0,130" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfHexNAc_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Row="0" Name="Deoxyhexose_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="240,0,0,73" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfDeoxyhexose_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Row="0" Name="Pentose_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="240,0,0,16" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfPentose_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Row="0" Name="NeuAc_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="240,41,0,0" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfNeuAc_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Row="0" Name="NeuGc_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="240,98,0,0" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfNeuGc_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Row="0" Name="KDN_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="240,155,0,0" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfKDN_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Row="0" Name="HexA_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="240,212,0,0" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfHexA_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+
+
+                <!--"User" Label (Row 2 x Col 1)-->
+                <Label Grid.Row="1" Content="User" Style="{StaticResource tertiaryHeaderLabelTextStyle}" />
+
+                <!--User White Outline-->
+                <Path Grid.Row="1" Stroke="White" StrokeThickness="2" Data="M 120,18 H 10 V 85 H 285 V 18 H 170" />
+
+                <!--User Unit CheckBoxes-->
+                <CheckBox Grid.Row="1" Name="userUnitA_UCheckBox" Margin="15,0,0,110" VerticalAlignment="Center"
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedUserUnit1_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="1" Name="UserUnitB_UCheckBox" Margin="15,0,0,45" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedUserUnit2_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
+                <!--User Unit Labels-->
+                <Label Grid.Row="1" Content="User Unit A" Margin="30,0,0,110" Style="{StaticResource blackLeftLineLabelTextStyle}" />
+                <Label Grid.Row="1" Content="User Unit B" Margin="30,0,0,45" Style="{StaticResource blackLeftLineLabelTextStyle}" />
+                                 
+                <!--"->" Label-->
+                <Label Grid.Row="1" Content="-->" Margin="110,0,0,110" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Row="1" Content="-->" Margin="110,0,0,45" HorizontalAlignment="Left" VerticalAlignment="Center" />
+
+                <!--Text Boxes for mass of User Unit A and B-->
+                <TextBox Grid.Row="1" Name="massOfUserUnitA_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="139,0,0,110" Width="65" 
+                         Text="{Binding Path=OmniFinderGMRangesModel.MassUserUnit1_Double}" TextChanged="massOfUserUnitA_UTextBox_TextChanged" />
+                <TextBox Grid.Row="1" Name="massOfUserUnitB_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="139,0,0,45" Width="65" 
+                         Text="{Binding Path=OmniFinderGMRangesModel.MassUserUnit2_Double}" TextChanged="massOfUserUnitA_UTextBox_TextChanged"  />
+
+                <!--"#" Labels-->
+                <Label Grid.Row="1" Content="#" Margin="220,0,0,110" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Row="1" Content="#" Margin="220,0,0,45" HorizontalAlignment="Left" VerticalAlignment="Center" />
+
+                <!--Number Of User Unit Text Boxes-->
+                <TextBox Grid.Row="1" Name="UserUnitA_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="240,0,0,110" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfUserUnit1_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Row="1" Name="UserUnitB_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="240,0,0,45" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfUserUnit2_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+
+
+                <!--"Special" Label-->
+                <Label Grid.Row="1" Content="Special" Margin="0,82,0,0" Style="{StaticResource tertiaryHeaderLabelTextStyle}" />
+
+                <!--Special White Outline-->
+                <Path Grid.Row="1" Stroke="White" StrokeThickness="2" Data="M 115,100 H 10 V 175 H 285 V 100 H 175" />
+
+                <!--Special CheckBoxes-->
+                <CheckBox Grid.Row="1" Name="naH_UCheckBox" Margin="15,60,0,0" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedNaH_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="1" Name="cH3_UCheckBox" Margin="15,130,0,0" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedCH3_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="1" Name="sO3_UCheckBox" Margin="140,60,0,0" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedSO3_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="1" Name="oAcetyl_UCheckBox" Margin="140,130,0,0" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedOAcetyl_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
+                <!--Special Labels-->
+                <Label Grid.Row="1" Content="NaH" Margin="30,60,0,0" Style="{StaticResource blackLeftLineLabelTextStyle}" />
+                <Label Grid.Row="1" Content="CH₃" Margin="30,130,0,0" Style="{StaticResource blackLeftLineLabelTextStyle}" />
+                <Label Grid.Row="1" Content="SO₃­" Margin="155,60,0,0" Style="{StaticResource blackLeftLineLabelTextStyle}" />
+                <Label Grid.Row="1" Content="OActyl" Margin="155,130,0,0" Style="{StaticResource blackLeftLineLabelTextStyle}" />
+
+                <!--"#" Labels-->
+                <Label Grid.Row="1" Content="#" Margin="70,60,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Row="1" Content="#" Margin="70,130,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Row="1" Content="#" Margin="220,60,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Row="1" Content="#" Margin="220,130,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+
+                <!--Special Text Boxes-->
+                <TextBox Grid.Row="1" Name="naH_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="90,60,0,0" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfNaH_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Row="1" Name="cH3_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="90,130,0,0" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfCH3_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Row="1" Name="sO3_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="240,60,0,0" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfSO3_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Row="1" Name="OActyl_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="240,130,0,0" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfOAcetyl_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+
+
+                <!--"Amino Acids" Label (Row 1 x Col 2)-->
+                <Label Grid.Column="1" Content="Amino Acids" Style="{StaticResource tertiaryHeaderLabelTextStyle}" />
+
+                <!--Amino Acids White Outline-->
+                <Path Grid.Column="1" Stroke="White" StrokeThickness="2" Data="M 120,20 H 10 V 255 H 335 V 20 H 220" />
+
+                <!--Amino Acids CheckBoxes-->
+                <CheckBox Grid.Row="0" Grid.Column="1" Name="ala_UCheckBox" Margin="15,0,0,187" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedAla_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="0" Grid.Column="1" Name="arg_UCheckBox" Margin="15,0,0,120" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedArg_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="0" Grid.Column="1" Name="asn_UCheckBox" Margin="15,0,0,53" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedAsn_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="0" Grid.Column="1" Name="asp_UCheckBox" Margin="15,14,0,0" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedAsp_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="0" Grid.Column="1" Name="cys_UCheckBox" Margin="15,81,0,0" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedCys_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="0" Grid.Column="1" Name="gln_UCheckBox" Margin="15,148,0,0" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedGln_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="0" Grid.Column="1" Name="glu_UCheckBox" Margin="15,215,0,0" VerticalAlignment="Center"
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedGlu_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="0" Grid.Column="1" Name="gly_UCheckBox" Margin="125,0,0,187" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedGly_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="0" Grid.Column="1" Name="his_UCheckBox" Margin="125,0,0,120" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedHis_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="0" Grid.Column="1" Name="ile_UCheckBox" Margin="125,0,0,53" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedIle_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="0" Grid.Column="1" Name="leu_UCheckBox" Margin="125,14,0,0" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedLeu_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="0" Grid.Column="1" Name="lys_UCheckBox" Margin="125,81,0,0" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedLys_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="0" Grid.Column="1" Name="met_UCheckBox" Margin="125,148,0,0" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedMet_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="0" Grid.Column="1" Name="phe_UCheckBox" Margin="125,215,0,0" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedPhe_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="0" Grid.Column="1" Name="ser_UCheckBox" Margin="235,0,0,187" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedSer_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="0" Grid.Column="1" Name="thr_UCheckBox" Margin="235,0,0,120" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedThr_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="0" Grid.Column="1" Name="trp_UCheckBox" Margin="235,0,0,53" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedTrp_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="0" Grid.Column="1" Name="tyr_UCheckBox" Margin="235,14,0,0" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedTyr_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="0" Grid.Column="1" Name="val_UCheckBox" Margin="235,81,0,0" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedVal_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="0" Grid.Column="1" Name="pro_UCheckBox" Margin="235,148,0,0" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedPro_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
+                <!--Amino Acids Labels-->
+                <Label Grid.Row="0" Grid.Column="1" Content="Ala" Margin="30,0,0,187" Style="{StaticResource blackLeftLineLabelTextStyle}" />
+                <Label Grid.Row="0" Grid.Column="1" Content="Arg" Margin="30,0,0,120" Style="{StaticResource blackLeftLineLabelTextStyle}" />
+                <Label Grid.Row="0" Grid.Column="1" Content="Asn" Margin="30,0,0,53" Style="{StaticResource blackLeftLineLabelTextStyle}" />
+                <Label Grid.Row="0" Grid.Column="1" Content="Asp" Margin="30,14,0,0" Style="{StaticResource blackLeftLineLabelTextStyle}" />
+                <Label Grid.Row="0" Grid.Column="1" Content="Cys" Margin="30,81,0,0" Style="{StaticResource blackLeftLineLabelTextStyle}" />
+                <Label Grid.Row="0" Grid.Column="1" Content="Gln" Margin="30,148,0,0" Style="{StaticResource blackLeftLineLabelTextStyle}" />
+                <Label Grid.Row="0" Grid.Column="1" Content="Glu" Margin="30,215,0,0" Style="{StaticResource blackLeftLineLabelTextStyle}" />
+                <Label Grid.Row="0" Grid.Column="1" Content="Gly" Margin="140,0,0,187" Style="{StaticResource blackLeftLineLabelTextStyle}" />
+                <Label Grid.Row="0" Grid.Column="1" Content="His" Margin="140,0,0,120" Style="{StaticResource blackLeftLineLabelTextStyle}" />
+                <Label Grid.Row="0" Grid.Column="1" Content="Ile" Margin="140,0,0,53" Style="{StaticResource blackLeftLineLabelTextStyle}" />
+                <Label Grid.Row="0" Grid.Column="1" Content="Leu" Margin="140,14,0,0" Style="{StaticResource blackLeftLineLabelTextStyle}" />
+                <Label Grid.Row="0" Grid.Column="1" Content="Lys" Margin="140,81,0,0" Style="{StaticResource blackLeftLineLabelTextStyle}" />
+                <Label Grid.Row="0" Grid.Column="1" Content="Met" Margin="140,148,0,0" Style="{StaticResource blackLeftLineLabelTextStyle}" />
+                <Label Grid.Row="0" Grid.Column="1" Content="Phe" Margin="140,215,0,0" Style="{StaticResource blackLeftLineLabelTextStyle}" />
+                <Label Grid.Row="0" Grid.Column="1" Content="Ser" Margin="250,0,0,187" Style="{StaticResource blackLeftLineLabelTextStyle}" />
+                <Label Grid.Row="0" Grid.Column="1" Content="Thr" Margin="250,0,0,120" Style="{StaticResource blackLeftLineLabelTextStyle}" />
+                <Label Grid.Row="0" Grid.Column="1" Content="Trp" Margin="250,0,0,53" Style="{StaticResource blackLeftLineLabelTextStyle}" />
+                <Label Grid.Row="0" Grid.Column="1" Content="Tyr" Margin="250,14,0,0" Style="{StaticResource blackLeftLineLabelTextStyle}" />
+                <Label Grid.Row="0" Grid.Column="1" Content="Val" Margin="250,81,0,0" Style="{StaticResource blackLeftLineLabelTextStyle}" />
+                <Label Grid.Row="0" Grid.Column="1" Content="Pro" Margin="250,148,0,0"  Style="{StaticResource blackLeftLineLabelTextStyle}" />
+
+                <!--"#" Labels-->
+                <Label Grid.Column="1" Content="#" Margin="60,0,0,187" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Column="1" Content="#" Margin="60,0,0,120" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Column="1" Content="#" Margin="60,0,0,53" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Column="1" Content="#" Margin="60,14,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Column="1" Content="#" Margin="60,81,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Column="1" Content="#" Margin="60,148,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Column="1" Content="#" Margin="60,215,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Column="1" Content="#" Margin="170,0,0,187" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Column="1" Content="#" Margin="170,0,0,120" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Column="1" Content="#" Margin="170,0,0,53" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Column="1" Content="#" Margin="170,14,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Column="1" Content="#" Margin="170,81,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Column="1" Content="#" Margin="170,148,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Column="1" Content="#" Margin="170,215,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Column="1" Content="#" Margin="280,0,0,187" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Column="1" Content="#" Margin="280,0,0,120" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Column="1" Content="#" Margin="280,0,0,53" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Column="1" Content="#" Margin="280,14,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Column="1" Content="#" Margin="280,81,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Column="1" Content="#" Margin="280,148,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+
+                <!--Amino Acids Text Boxes-->
+                <TextBox Grid.Column="1" Name="ala_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="80,0,0,187" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfAla_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Column="1" Name="arg_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="80,0,0,120" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfArg_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Column="1" Name="asn_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="80,0,0,53" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfAsn_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Column="1" Name="asp_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="80,14,0,0" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfAsp_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Column="1" Name="cys_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="80,81,0,0" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfCys_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Column="1" Name="gln_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="80,148,0,0" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfGln_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Column="1" Name="glu_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="80,215,0,0" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfGlu_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Column="1" Name="gly_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="190,0,0,187" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfGly_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Column="1" Name="his_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="190,0,0,120" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfHis_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Column="1" Name="ile_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="190,0,0,53" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfIle_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Column="1" Name="leu_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="190,14,0,0" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfLeu_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Column="1" Name="lys_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="190,81,0,0" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfLys_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Column="1" Name="met_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="190,148,0,0" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfMet_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Column="1" Name="phe_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="190,215,0,0" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfPhe_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Column="1" Name="ser_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="300,0,0,187" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfSer_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Column="1" Name="thr_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="300,0,0,120" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfThr_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Column="1" Name="trp_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="300,0,0,53" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfTrp_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Column="1" Name="tyr_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="300,14,0,0" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfTyr_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Column="1" Name="val_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="300,81,0,0" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfVal_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Column="1" Name="pro_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="300,148,0,0" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfPro_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+
+
+                <!--"Permethyl" Label (Row 2 x Col 2)-->
+                <Label Grid.Column="1" Grid.Row="1" Content="Permethyl" 
+                Style="{StaticResource tertiaryHeaderLabelTextStyle}" />
+
+                <!--Permethyl White Outline-->
+                <Path Grid.Column="1" Grid.Row="1" Stroke="White" StrokeThickness="2" 
+                Data="M 125,18 H 10 V 175 H 335 V 18 H 215" />
+
+                <!--Permethyl CheckBoxes-->
+                <CheckBox Grid.Row="1" Grid.Column="1" Name="pHex_UCheckBox" Margin="15,0,0,95" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedpHex_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="1" Grid.Column="1" Name="pHxNAc_UCheckBox" Margin="15,0,0,25" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedpHxNAc_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="1" Grid.Column="1" Name="pDxHex_UCheckBox" Margin="15,45,0,0" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedpDxHex_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="1" Grid.Column="1" Name="pPntos_UCheckBox" Margin="15,135,0,0" VerticalAlignment="Center"
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedpPntos_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="1" Grid.Column="1" Name="pNuAc_UCheckBox" Margin="185,0,0,95" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedpNuAc_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="1" Grid.Column="1" Name="pNuGc_UCheckBox" Margin="185,0,0,25" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedpNuGc_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="1" Grid.Column="1" Name="pKDN_UCheckBox" Margin="185,45,0,0" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedpKDN_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <CheckBox Grid.Row="1" Grid.Column="1" Name="pHxA_UCheckBox" Margin="185,135,0,0" VerticalAlignment="Center" 
+                          IsChecked="{Binding Path=OmniFinderGMModel.CheckedpHxA_Bool, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
+                <!--Permethyl Labels-->
+                <Label Grid.Row="1" Grid.Column="1" Content="pHex" Margin="30,0,0,95" Style="{StaticResource blackLeftLineLabelTextStyle}"/>
+                <Label Grid.Row="1" Grid.Column="1" Content="pHxNAc" Margin="30,0,0,25" Style="{StaticResource blackLeftLineLabelTextStyle}"/>
+                <Label Grid.Row="1" Grid.Column="1" Content="pDxHex" Margin="30,45,0,0" Style="{StaticResource blackLeftLineLabelTextStyle}"/>
+                <Label Grid.Row="1" Grid.Column="1" Content="pPntos" Margin="30,135,0,0" Style="{StaticResource blackLeftLineLabelTextStyle}" />
+                <Label Grid.Row="1" Grid.Column="1" Content="pNuAc" Margin="200,0,0,95" Style="{StaticResource blackLeftLineLabelTextStyle}"/>
+                <Label Grid.Row="1" Grid.Column="1" Content="pNuGc" Margin="200,0,0,25" Style="{StaticResource blackLeftLineLabelTextStyle}"/>
+                <Label Grid.Row="1" Grid.Column="1" Content="pKDN" Margin="200,45,0,0" Style="{StaticResource blackLeftLineLabelTextStyle}"/>
+                <Label Grid.Row="1" Grid.Column="1" Content="pHxA" Margin="200,135,0,0" Style="{StaticResource blackLeftLineLabelTextStyle}"/>
+
+                <!--"#" Labels-->
+                <Label Grid.Row="1" Grid.Column="1" Content="#" Margin="90,0,0,95" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Row="1" Grid.Column="1" Content="#" Margin="90,0,0,25" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Row="1" Grid.Column="1" Content="#" Margin="90,45,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Row="1" Grid.Column="1" Content="#" Margin="90,135,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Row="1" Grid.Column="1" Content="#" Margin="250,0,0,95" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Row="1" Grid.Column="1" Content="#" Margin="250,0,0,25" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Row="1" Grid.Column="1" Content="#" Margin="250,45,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Row="1" Grid.Column="1" Content="#" Margin="250,135,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+
+                <!--Permethyl Text Boxes-->
+                <TextBox Grid.Row="1" Grid.Column="1" Name="pHex_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="110,0,0,95" Width="25"
+                         Text="{Binding Path=GlycanMakerModel.NumberOfpHex_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Row="1" Grid.Column="1" Name="pHxNAc_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="110,0,0,25" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfpHxNAc_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Row="1" Grid.Column="1" Name="pDxHex_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="110,45,0,0" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfpDxHex_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Row="1" Grid.Column="1" Name="pPntos_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="110,135,0,0" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfpPntos_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Row="1" Grid.Column="1" Name="pNuAc_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="270,0,0,95" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfpNuAc_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Row="1" Grid.Column="1" Name="pNuGc_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="270,0,0,25" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfpNuGc_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Row="1" Grid.Column="1" Name="pKDN_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="270,45,0,0" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfpKDN_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+                <TextBox Grid.Row="1" Grid.Column="1" Name="pHxA_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="270,135,0,0" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfpHxA_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+
+
+                <!--Charge Carrier White Outline (Row 3 x Col 1)-->
+                <Path Grid.Row="2" Grid.Column="0" Stroke="White" StrokeThickness="2" Data="M 10,5 V 155 H 285 V 5 H 10" />
+
+                <!--"Charge Carrier" and "Carbohydrate Type" Labels-->
+                <Label Grid.Row="2" Grid.Column="0" Content="Charge Carrier" Margin="10,0,0,120" Style="{StaticResource leftLineLabelTextStyle}" />
+                <Label Grid.Row="2" Grid.Column="0" Content="Carbohydrate Type" Margin="10,20,0,0" Style="{StaticResource leftLineLabelTextStyle}" />
+
+                <!--Charge Carrier Combobox-->
+                <ComboBox Grid.Row="2" Grid.Column="0" Name="chargeCarrierGlycanMakerComboBox"  Height="23" Width="70" Margin="20,0,0,50"
+                          HorizontalAlignment="Left" VerticalAlignment="Center" IsEditable="true" IsReadOnly="true"
+                          ItemsSource="{StaticResource ChargeCarrierStrings}" DisplayMemberPath="ValueString" SelectedValuePath="ValueString" 
+                          SelectedValue="{Binding Path=GlycanMakerModel.TypeOfChargeCarrier_String, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
+                <!--Charge Carrier "#" Label and corresponding Text Box-->
+                <Label Grid.Row="2" Content="#" Margin="150,0,0,50" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <TextBox Grid.Row="2" Name="ChargeCarrier_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="170,0,0,50" Width="25" 
+                         Text="{Binding Path=GlycanMakerModel.NumberOfChargeCarrier_Int}" TextChanged="Hexose_UTextBox_TextChanged" />
+
+
+                <!--Carbohydrate Type Combobox-->
+                <ComboBox Grid.Row="2" Grid.Column="0" Name="carbohydrateTypeGlycanMakerComboBox"  Height="23" 
+                          HorizontalAlignment="Left" VerticalAlignment="Center" Width="130" Margin="20,80,0,0"
+                          IsEditable="true" IsReadOnly="true" ItemsSource="{StaticResource CarbTypeStrings}" 
+                          DisplayMemberPath="ValueString" SelectedValuePath="ValueString" 
+                          SelectedValue="{Binding Path=GlycanMakerModel.CarbohydrateType_String, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
+
+                <!-- Neutral Mass White Outline (Row 3 x Col 2)-->
+                <Path Grid.Row="2" Grid.Column="1" Stroke="White" StrokeThickness="2" Data="M 5,5 V 155 H 335 V 5 H 5" />
+
+                <!--"Neutral Mass" and "Mass/Charge" Labels-->
+                <Label Grid.Row="2" Grid.Column="1" Content="Neutral Mass" Margin="10,0,0,110" Style="{StaticResource leftLineLabelTextStyle}" />
+                <Label Grid.Row="2" Grid.Column="1" Content="Mass/Charge" Margin="10,0,0,50" Style="{StaticResource leftLineLabelTextStyle}" />
+
+                <!--"->" Labels in Front of Neutral Mass and Mass/Change Text Boxes-->
+                <Label Grid.Row="2" Grid.Column="1" Content="-->" Margin="120,0,0,110" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Label Grid.Row="2" Grid.Column="1" Content="-->" Margin="120,0,0,50" HorizontalAlignment="Left" VerticalAlignment="Center" />
+
+                <!--Neutral Mass and Mass/Charge Text Boxes-->
+                <TextBox Grid.Row="2" Grid.Column="1" Name="neutralMass_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="170,0,0,110" 
+                         Width="100" IsReadOnly="True" Text="{Binding Path=GlycanMakerModel.NeutralMass_Double}" />
+                <TextBox Grid.Row="2" Grid.Column="1" Name="massCharge_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="170,0,0,50" 
+                         Width="100" IsReadOnly="True" Text="{Binding Path=GlycanMakerModel.MassCharge_Double}" />
+
+
+                <!--"C, H, O, N, and Na" Labels-->
+                <Label Grid.Row="2" Grid.Column="1" Content="C" Margin="0,15,190,0" Style="{StaticResource directionsLabelTextStyle}" />
+                <Label Grid.Row="2" Grid.Column="1" Content="H" Margin="0,15,25,0" Style="{StaticResource directionsLabelTextStyle}" />
+                <Label Grid.Row="2" Grid.Column="1" Content="O" Margin="140,15,0,0" Style="{StaticResource directionsLabelTextStyle}" />
+                <Label Grid.Row="2" Grid.Column="1" Content="N" Margin="0,85,190,0" Style="{StaticResource directionsLabelTextStyle}" />
+                <Label Grid.Row="2" Grid.Column="1" Content="Na" Margin="0,85,20,0" Style="{StaticResource directionsLabelTextStyle}" />
+
+                <!--C, H, O, N, and Na Amount Text Boxes-->
+                <TextBox Grid.Row="2" Grid.Column="1" Name="C_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="35,15,0,0" Width="25"
+                         IsReadOnly="True" Text="{Binding Path=GlycanMakerModel.NumberOfC_Int}" />
+                <TextBox Grid.Row="2" Grid.Column="1" Name="H_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="120,15,0,0" Width="25"
+                         IsReadOnly="True" Text="{Binding Path=GlycanMakerModel.NumberOfH_Int}" />
+                <TextBox Grid.Row="2" Grid.Column="1" Name="O_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="205,15,0,0" Width="25" 
+                         IsReadOnly="True" Text="{Binding Path=GlycanMakerModel.NumberOfO_Int}" />
+                <TextBox Grid.Row="2" Grid.Column="1" Name="N_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="35,85,0,0" Width="25" 
+                         IsReadOnly="True" Text="{Binding Path=GlycanMakerModel.NumberOfN_Int}" />
+                <TextBox Grid.Row="2" Grid.Column="1" Name="Na_UTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="120,85,0,0" Width="25"
+                         IsReadOnly="True" Text="{Binding Path=GlycanMakerModel.NumberOfNa_Int}" />
+            </Grid>
+
+
+            <!--Calculate Mass Button (Row 3)-->
+            <Button Grid.Row="2" Name="calculateMassButton" Content="Calculate Mass" Margin="0,0,350,0" Width="180"
+                    Style="{StaticResource optionButtonStyle}" Command="{Binding ButtonCommand}" CommandParameter="calculateMass">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="LightSkyBlue" Offset="0.25"/>
+                        <GradientStop Color="MediumSlateBlue" Offset="1.0"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+
+            <!--Ranges Button-->
+            <Button Grid.Row="2" Name="rangesButton" Content="Ranges" Margin="300,0,0,0" Width="140"
+                    Style="{StaticResource optionButtonStyle}" Click="rangesButton_Click">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="Pink" Offset="0.5"/>
+                        <GradientStop Color="DeepPink" Offset="1.0"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+        </Grid>
+    </Canvas>
+</Page>

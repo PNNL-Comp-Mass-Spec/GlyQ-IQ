@@ -1,0 +1,106 @@
+﻿<Page x:Class="GlycolyzerGUImvvm.Views.HomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:vm="clr-namespace:GlycolyzerGUImvvm.ViewModels"
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="400"
+	  Title="HomePage">
+
+    <Page.DataContext>
+        <vm:HomeViewModel/>
+    </Page.DataContext>
+
+    <!--3 Row Main Grid-->
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                <GradientStop Color="Aquamarine" Offset="0.1"/>
+                <GradientStop Color="MediumTurquoise" Offset="0.4"/>
+                <GradientStop Color="DarkCyan" Offset="0.75"/>
+                <GradientStop Color="DarkSlateBlue" Offset="1.0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+
+        <!--"Home" Label (Row 1)-->
+        <Label Grid.Row="0" Content="Home" Style="{StaticResource headerLabelTextStyle}" />
+
+
+        <!--Utilities Button (Row 2)-->
+        <Button Grid.Row="1" Name="OmniFinderGMButton" Style="{StaticResource directorButtonStyle}"
+               Click="OmniFinderGMButton_Click">
+            <TextBlock>OmniFinder/<LineBreak/>Glycan Maker</TextBlock>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                <GradientStop Color="LightSeaGreen" Offset="0.4"/>
+                <GradientStop Color="GreenYellow" Offset="1.0"/>
+            </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+
+        <!--Parameters Button (Row 3)-->
+        <Button Grid.Row="2" Name="parametersButton" Content="Parameters" Margin="0,0,0,0" Style="{StaticResource directorButtonStyle}"
+                Click="parametersButton_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="LightSeaGreen" Offset="0.25"/>
+                    <GradientStop Color="GreenYellow" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <!--"Application Parameter Save Location:" Label (Row 4)-->
+        <Label Grid.Row="3" Content="Application Parameter Folder Location:" Margin="0,0,0,30"
+               Style="{StaticResource leftLineLabelTextStyle}" />
+
+        <!--Folder Field Text="{Binding Path=FolderModel.SaveAppParametersLocationFolder_String}"-->
+        <TextBox Grid.Row="3" Name="appParametersFolderBrowseTextBox" HorizontalAlignment="Left"
+                 VerticalAlignment="Center" Margin="30,20,0,0" Width="239" />
+
+        <!--Browse Button for Folder-->
+        <Button Grid.Row="3" Content="Browse" Name="appParametersBrowseButton" 
+                Style="{StaticResource smallOptionButtonStyle}" Margin="250,20,0,0"
+                Command="{Binding ButtonCommand}" CommandParameter="appParametersBrowse" />
+
+        <!--Load Parameters Button (Row 5)-->
+        <Button Grid.Row="4" Name="loadParametersButton" Content="Load" Margin="0,0,200,0" Height="40" Width="115" Style="{StaticResource optionButtonStyle}"
+                Click="loadParametersButton_Click">
+            <Button.Background>
+                <RadialGradientBrush GradientOrigin="0.2,0.2" Center="0.2,0.2" RadiusX="1.0" RadiusY="0.9">
+                    <RadialGradientBrush.GradientStops>
+                        <GradientStop Color="Fuchsia" Offset="0.0" />
+                        <GradientStop Color="PeachPuff" Offset="0.5" />
+                        <GradientStop Color="Pink" Offset="0.75" />
+                        <GradientStop Color="HotPink" Offset="1" />
+                    </RadialGradientBrush.GradientStops>
+                </RadialGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <!--Save Parameters Button (Row 5)-->
+        <Button Grid.Row="4" Name="saveParametersButton" Content="Save"  Margin="200,0,0,0" Height="40" Width="115" Style="{StaticResource optionButtonStyle}"
+                Click="saveParametersButton_Click">
+            <Button.Background>
+                <RadialGradientBrush GradientOrigin="0.2,0.2" Center="0.2,0.2" RadiusX="1.0" RadiusY="0.9">
+                    <RadialGradientBrush.GradientStops>
+                        <GradientStop Color="Orange" Offset="0.0" />
+                        <GradientStop Color="OrangeRed" Offset="0.5" />
+                        <GradientStop Color="Gold" Offset="0.75" />
+                        <GradientStop Color="Crimson" Offset="1" />
+                    </RadialGradientBrush.GradientStops>
+                </RadialGradientBrush>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Page>

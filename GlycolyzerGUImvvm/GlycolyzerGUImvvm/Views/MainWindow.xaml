@@ -1,0 +1,11 @@
+﻿<NavigationWindow x:Class="GlycolyzerGUImvvm.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Glycolyzer V2.0" MinWidth="418" MinHeight="468" Width="Auto" Height="Auto" SizeToContent="WidthAndHeight" Source="HomePage.xaml">
+
+    <NavigationWindow.Background>
+        <ImageBrush ImageSource="D:\Projects\Visual Studio 2010\Projects\SVN_GlycolyzerGUImvvm\GlycolyzerGUImvvm\CircleBG.png"
+                    Stretch="Fill" AlignmentX="Center" AlignmentY="Center" />
+    </NavigationWindow.Background>
+
+</NavigationWindow>
