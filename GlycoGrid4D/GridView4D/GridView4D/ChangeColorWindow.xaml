@@ -1,0 +1,26 @@
+﻿<Window x:Class="GridView4D.ChangeColorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ChangeColorWindow" Height="450" Width="450" Background="Black">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Select File to Change the Color of:" Style="{StaticResource labelStyle}"></Label>
+        <ListBox Grid.Row="0" Grid.Column="0" Name="fileChangeListBox" SelectionMode="Extended" Margin="0,30,0,0"></ListBox>
+        <ListBox Grid.Row="0" Grid.Column="0" Name="listBoxTopFiles" SelectionMode="Extended" Margin="0,30,0,0"></ListBox>
+
+        <Label Grid.Row="0" Grid.Column="1" Content="Select Color to Change to:" Style="{StaticResource labelStyle}"></Label>
+        <ListBox Grid.Row="0" Grid.Column="1" Name="colorChangeListBox" SelectionMode="Single" Margin="0,30,0,0"></ListBox>
+
+        <Button Grid.Row="1" Grid.Column="0" Content="Done" Name="doneChangingButton" Click="doneChangingButton_Click" Style="{StaticResource shortButtonStyle}"></Button>
+        <Button Grid.Row="1" Grid.Column="1" Content="Cancel" Name="cancelChangingButton" Click="doneChangingButton_Click" Style="{StaticResource shortButtonStyle}"></Button>
+    </Grid>
+</Window>

@@ -1,0 +1,8 @@
+﻿<Window x:Class="GridView4D.LoadingPopUp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="LoadingPopUp" Height="100" Width="300" Background="Black">
+    <Grid>
+        <Label Content="Loading File..." Grid.Row="0" Style="{StaticResource centerLabelStyle}"/>
+    </Grid>
+</Window>

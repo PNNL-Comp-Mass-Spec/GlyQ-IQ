@@ -1,0 +1,6 @@
+﻿<NavigationWindow x:Class="GridView4D.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" MinWidth="450" MinHeight="450" Height="auto" Width="auto" SizeToContent="WidthAndHeight" Source="Home.xaml">
+
+</NavigationWindow>
