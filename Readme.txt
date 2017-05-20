@@ -19,6 +19,16 @@ though the master solution file is GetPeaks3\GetPeaks3.sln
 There is also a 32-bit version, but the code-base may be a bit out of date.
 That solution file is at GetPeaks2\GetPeaks2.sln
 
+=== Manuscript ===
+
+GlyQ-IQ: glycomics quintavariate-informed quantification with high-performance computing and GlycoGrid 4D visualization.
+Anal Chem. 2014 Jul 1;86(13):6268-76. doi: 10.1021/ac501492f.
+https://www.ncbi.nlm.nih.gov/pubmed/24881670
+
+=== Support ===
+
+Important Note: GlyQ-IQ is provided on an as-is basis and is no longer supported.
+
 
 == Usage ==
 
