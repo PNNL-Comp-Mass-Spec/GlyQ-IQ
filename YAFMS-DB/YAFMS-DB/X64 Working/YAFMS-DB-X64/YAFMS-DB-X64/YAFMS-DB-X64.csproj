@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D13E23CD-9159-4B35-AAD7-DB912A9F825C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YAFMS_DB_X64</RootNamespace>
+    <AssemblyName>YAFMS-DB-X64</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\..\..\..\X86 NUnit Framework\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.51.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\X64 SQLite\System.Data.SQLite.DLL</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonCode\DeconTools\EICUtilities.cs" />
+    <Compile Include="CommonCode\EnumerationPeaksArrays.cs" />
+    <Compile Include="CommonCode\GetPeaks\ConvertDatabaseTransferObject.cs" />
+    <Compile Include="CommonCode\GetPeaks\DatabasePeakCentricLiteObject.cs" />
+    <Compile Include="CommonCode\GetPeaks\DatabasePeakCentricObject.cs" />
+    <Compile Include="CommonCode\GetPeaks\DatabaseScanCentricObject.cs" />
+    <Compile Include="CommonCode\GetPeaks\DatabaseTransferObject.cs" />
+    <Compile Include="CommonCode\GetPeaks\ScanCentric.cs" />
+    <Compile Include="CommonCode\PeakArrays.cs" />
+    <Compile Include="CommonCode\PNNLOmics\BaseData.cs" />
+    <Compile Include="CommonCode\PNNLOmics\Peak.cs" />
+    <Compile Include="CommonCode\PNNLOmics\ProcessedPeak.cs" />
+    <Compile Include="CommonCode\PNNLOmics\XYData.cs" />
+    <Compile Include="CommonCode\ReadDatabase.cs" />
+    <Compile Include="CommonCode\Reader\DatabaseLayerYAFMSDB.cs" />
+    <Compile Include="CommonCode\Reader\GetCentroidedPeaks.cs" />
+    <Compile Include="CommonCode\Reader\GetProcessedPeaks.cs" />
+    <Compile Include="CommonCode\Reader\GetScanNumbers.cs" />
+    <Compile Include="CommonCode\Reader\LoadEicFromDatabase.cs" />
+    <Compile Include="CommonCode\UnitTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy $(TargetName).* "$(SolutionDir)..\..\..\..\X86 YAFMSDB\X64"
+xcopy *.dll "$(SolutionDir)..\..\..\..\X86 YAFMSDB\X64" /D /Y
+xcopy *.pdb "$(SolutionDir)..\..\..\..\X86 YAFMSDB\X64" /D /Y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

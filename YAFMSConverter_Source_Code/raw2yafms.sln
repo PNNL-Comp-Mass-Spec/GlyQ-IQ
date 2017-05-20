@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "raw2yafms", "raw2yafms\raw2yafms.csproj", "{4D0B2937-A2FA-4A8E-BB70-B689681CEDCC}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "YafmsInstaller", "YafmsInstaller\YafmsInstaller.vdproj", "{77DF8FE6-9D51-4617-9B98-7A1FEEBC6112}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "raw2yafms DLL", "raw2yafms DLL\raw2yafms DLL.csproj", "{3A60B2E4-03B0-469D-9B79-EF109950362A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D0B2937-A2FA-4A8E-BB70-B689681CEDCC}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{4D0B2937-A2FA-4A8E-BB70-B689681CEDCC}.Debug|Any CPU.Build.0 = Debug|x86
+		{4D0B2937-A2FA-4A8E-BB70-B689681CEDCC}.Debug|x86.ActiveCfg = Debug|x86
+		{4D0B2937-A2FA-4A8E-BB70-B689681CEDCC}.Debug|x86.Build.0 = Debug|x86
+		{4D0B2937-A2FA-4A8E-BB70-B689681CEDCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D0B2937-A2FA-4A8E-BB70-B689681CEDCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D0B2937-A2FA-4A8E-BB70-B689681CEDCC}.Release|x86.ActiveCfg = Release|x86
+		{4D0B2937-A2FA-4A8E-BB70-B689681CEDCC}.Release|x86.Build.0 = Release|x86
+		{77DF8FE6-9D51-4617-9B98-7A1FEEBC6112}.Debug|Any CPU.ActiveCfg = Debug
+		{77DF8FE6-9D51-4617-9B98-7A1FEEBC6112}.Debug|x86.ActiveCfg = Debug
+		{77DF8FE6-9D51-4617-9B98-7A1FEEBC6112}.Debug|x86.Build.0 = Debug
+		{77DF8FE6-9D51-4617-9B98-7A1FEEBC6112}.Release|Any CPU.ActiveCfg = Release
+		{77DF8FE6-9D51-4617-9B98-7A1FEEBC6112}.Release|x86.ActiveCfg = Release
+		{77DF8FE6-9D51-4617-9B98-7A1FEEBC6112}.Release|x86.Build.0 = Release
+		{3A60B2E4-03B0-469D-9B79-EF109950362A}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{3A60B2E4-03B0-469D-9B79-EF109950362A}.Debug|Any CPU.Build.0 = Debug|x86
+		{3A60B2E4-03B0-469D-9B79-EF109950362A}.Debug|x86.ActiveCfg = Debug|x86
+		{3A60B2E4-03B0-469D-9B79-EF109950362A}.Debug|x86.Build.0 = Debug|x86
+		{3A60B2E4-03B0-469D-9B79-EF109950362A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A60B2E4-03B0-469D-9B79-EF109950362A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A60B2E4-03B0-469D-9B79-EF109950362A}.Release|x86.ActiveCfg = Release|x86
+		{3A60B2E4-03B0-469D-9B79-EF109950362A}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
