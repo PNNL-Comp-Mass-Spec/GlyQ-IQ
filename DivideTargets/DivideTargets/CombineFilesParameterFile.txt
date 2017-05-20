@@ -1,0 +1,5 @@
+Output,D:\Csharp\ConosleApps\LocalServer\IQ\GlyQ-IQ\Data Out\2013-7-6\PUB-2002_Results\Gly09_Velos3_Jaguar_230nL30_C14_DB10_30uL1X_31Dec12_iqResults.txt
+Input,D:\Csharp\ConosleApps\LocalServer\IQ\GlyQ-IQ\Data Out\2013-7-6\PUB-2002_Results\Gly09_Velos3_Jaguar_230nL30_C14_DB10_30uL1X_31Dec12_0_iqResults.txt
+Input,D:\Csharp\ConosleApps\LocalServer\IQ\GlyQ-IQ\Data Out\2013-7-6\PUB-2002_Results\Gly09_Velos3_Jaguar_230nL30_C14_DB10_30uL1X_31Dec12_1_iqResults.txt
+Input,D:\Csharp\ConosleApps\LocalServer\IQ\GlyQ-IQ\Data Out\2013-7-6\PUB-2002_Results\Gly09_Velos3_Jaguar_230nL30_C14_DB10_30uL1X_31Dec12_2_iqResults.txt
+Input,D:\Csharp\ConosleApps\LocalServer\IQ\GlyQ-IQ\Data Out\2013-7-6\PUB-2002_Results\Gly09_Velos3_Jaguar_230nL30_C14_DB10_30uL1X_31Dec12_3_iqResults.txt

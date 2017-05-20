@@ -1,0 +1,17 @@
+TargetsFile,L_10_IQ_TargetsFirst17.txt
+TargetsFolder,E:\ScottK\IQ\RunFiles
+DataFolderPath,E:\ScottK\GetPeaks Data\Diabetes_LC
+DataFile,Gly09_Velos3_Jaguar_230nL30_C14_DB10_30uL1X_31Dec12
+DataFileType,raw
+FactorsFile,Factors_L10.txt
+Cores,3
+ConsoleLocation,R:\RAM Files\GetPeaks\IQGlyQ_Console\bin\Release\IQGlyQ_Console.exe
+ResultsLocation,E:\ScottK\IQ\RunFiles
+GlyQIQParameters,GlyQIQ_Diabetes_Parameters.txt
+LockController,LockController.txt
+LockControllerDone,LockController_Done.txt
+WriteFolder,F:\ScottK\ToPic
+DeleteXYDataName,PUB100X_DeleteXYDataFolder.bat
+CopyResultBackName,PUB100X_CopyResultBack.bat
+PIC_DeleteFilesFileName,PIC_DeleteFiles.bat
+duplicateDataBool,true

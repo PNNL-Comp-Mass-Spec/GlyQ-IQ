@@ -1,0 +1,12 @@
+ResultsLocation,F:\ScottK\ToPic\WorkingParameters
+LaunchHomeLocationPub1000,E:\ScottK\Shared_PICFS\ToPIC
+PexecLocation,C:\\Download\\SysinternalsSuite\\psexec.exe
+SleepExeLocation,E:\\ScottK\\Shared_PICFS\\ToPIC\\GlyQ-IQ Sleep\\Release\\Sleep.exe
+RunMeSeccond100XFileName,PIC_RunMeSeccond_PUB100X.bat
+NodeShareFolderLocationOnNode This is a shared folder on the node we can copy to,E:\
+NodeShareFolder,NodeShareFolder
+AdminAccount,Administrator
+AdminPassword,Pub123456
+Pub-2002;192.168.3.22
+Pub-2003;132.168.3.23
+Pub-2004;132.168.3.24
