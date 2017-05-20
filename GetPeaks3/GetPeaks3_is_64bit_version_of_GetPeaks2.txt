@@ -1,0 +1,1 @@
+GetPeaks3 is essentially a 64-bit version of the GetPeaks2 apps
