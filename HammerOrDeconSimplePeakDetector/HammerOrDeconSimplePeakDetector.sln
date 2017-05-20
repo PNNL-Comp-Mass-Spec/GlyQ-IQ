@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HammerOrDeconSimplePeakDetector", "HammerOrDeconSimplePeakDetector\HammerOrDeconSimplePeakDetector.csproj", "{186C48AA-2556-4999-84A5-BC15FB23C7B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplePeakDetectorEngine", "SimplePeakDetectorEngine\SimplePeakDetectorEngine.csproj", "{56B2A6AE-1943-4D6F-8B0E-127468683F6C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{186C48AA-2556-4999-84A5-BC15FB23C7B2}.Debug|x86.ActiveCfg = Debug|x86
+		{186C48AA-2556-4999-84A5-BC15FB23C7B2}.Debug|x86.Build.0 = Debug|x86
+		{186C48AA-2556-4999-84A5-BC15FB23C7B2}.Release|x86.ActiveCfg = Release|x86
+		{186C48AA-2556-4999-84A5-BC15FB23C7B2}.Release|x86.Build.0 = Release|x86
+		{56B2A6AE-1943-4D6F-8B0E-127468683F6C}.Debug|x86.ActiveCfg = Debug|x86
+		{56B2A6AE-1943-4D6F-8B0E-127468683F6C}.Debug|x86.Build.0 = Debug|x86
+		{56B2A6AE-1943-4D6F-8B0E-127468683F6C}.Release|x86.ActiveCfg = Release|x86
+		{56B2A6AE-1943-4D6F-8B0E-127468683F6C}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
