@@ -1,0 +1,7 @@
+MultiSleepExecutionPath,F:\ScottK\ToPIC\GlyQ-IQ MultiSleep\Release\MultiSleep.exe
+CheckFileExecutionPath,F:\ScottK\ToPIC\GlyQ-IQ CheckFile\Release\WriteCheckFile.exe
+DeletefilesFileExecutionPath,F:\ScottK\ToPIC\GlyQ-IQ DeleteFiles\Release\DeleteFiles.exe
+WriteLocation,D:\CrazyFileCopy
+DataFileNameWithoutEnding,Gly09_Velos3_Jaguar_230nL30_C15_DB01_30uL1X_30Dec12
+FileExtension,.raw
+NumberOfCopies,4
