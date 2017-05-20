@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BDD751D2-12FB-4004-AA8E-F7083A33AD10}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GetPeaksDllLite</RootNamespace>
+    <AssemblyName>GetPeaksDllLite</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>U:\DLL_Files\Fast_DLL\X86 GetPeaksLite\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>U:\DLL_Files\Fast_DLL\X86 GetPeaksLite\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>U:\DLL_Files\Fast_DLL\X86 GetPeaksLite\X64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MathNet.Numerics, Version=2.6.1.30, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\X86 MathNet\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="PNNLOmics, Version=1.0.5245.26503, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\X86 PNNL Omics\PNNLOmics.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CompareAndContrast\CompareContrast2_Old.cs" />
+    <Compile Include="CompareAndContrast\CompareController.cs" />
+    <Compile Include="CompareAndContrast\CompareObjects.cs" />
+    <Compile Include="CompareAndContrast\IRapidCompare.cs" />
+    <Compile Include="DataFIFO\DataPeaksDataWriter.cs" />
+    <Compile Include="DataFIFO\DataXYDataWriter.cs" />
+    <Compile Include="DataFIFO\DeconFIFO\ISOSImporter.cs" />
+    <Compile Include="DataFIFO\DeconFIFO\PeaksImporter.cs" />
+    <Compile Include="DataFIFO\FileIterator.cs" />
+    <Compile Include="DataFIFO\IPeakListExporter.cs" />
+    <Compile Include="DataFIFO\IPeakWriter.cs" />
+    <Compile Include="DataFIFO\IXYDataWriter.cs" />
+    <Compile Include="DataFIFO\OmicsFIFO\IDataFileReader.cs" />
+    <Compile Include="DataFIFO\OmicsFIFO\IDataFileWriter.cs" />
+    <Compile Include="DataFIFO\OmicsFIFO\UMCLightTextReader.cs" />
+    <Compile Include="DataFIFO\OmicsFIFO\UMCLightTextWriter.cs" />
+    <Compile Include="DataFIFO\PeakListTextExporter.cs" />
+    <Compile Include="DataFIFO\StringListToDisk.cs" />
+    <Compile Include="DataFIFO\StringLoadTextFileLine.cs" />
+    <Compile Include="Functions\ConvertMonoToMz.cs" />
+    <Compile Include="Functions\ConvertMSPeakToPeakCentric.cs" />
+    <Compile Include="Functions\ConvertMzToMono.cs" />
+    <Compile Include="Functions\ConvertPeakListDeconToOmics.cs" />
+    <Compile Include="Functions\ConvertProcessedPeakToDeconPeak.cs" />
+    <Compile Include="Functions\ConvertProcessedPeakToXYData.cs" />
+    <Compile Include="Functions\ConvertSigmaAndPValue.cs" />
+    <Compile Include="Functions\ConvertXYData.cs" />
+    <Compile Include="Functions\ErrorCalculator.cs" />
+    <Compile Include="Functions\MassCalibration.cs" />
+    <Compile Include="Functions\ParsePeaksToPeakDecon.cs" />
+    <Compile Include="Functions\ParseStrings.cs" />
+    <Compile Include="Go_Decon_Modules\GoCreateRun.cs" />
+    <Compile Include="Go_Decon_Modules\GoGetFileType.cs" />
+    <Compile Include="HelloWorld.cs" />
+    <Compile Include="Isotopes\Averagine.cs" />
+    <Compile Include="Isotopes\IsotopeProfileFX.cs" />
+    <Compile Include="Isotopes\TheoryIsotope.cs" />
+    <Compile Include="Objects\DataSetMS.cs" />
+    <Compile Include="Objects\DeliminatorOfString.cs" />
+    <Compile Include="Objects\InputOutputFileName.cs" />
+    <Compile Include="Objects\IsotopeObject.cs" />
+    <Compile Include="Objects\PeakDecon.cs" />
+    <Compile Include="Objects\TandemMSObjects\PeakCentric.cs" />
+    <Compile Include="Objects\TandemMSObjects\ScanCentric.cs" />
+    <Compile Include="PNNLOmics_Modules\OrbitrapFilterParameters.cs" />
+    <Compile Include="PNNLOmics_Modules\OrbitrapThreshold.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Switches\SwitchPeakFitType.cs" />
+    <Compile Include="Switches\SwitchThreshold.cs" />
+    <Compile Include="TandemSupport\GatherDatasetInfo.cs" />
+    <Compile Include="TandemSupport\SelectScans.cs" />
+    <Compile Include="UnitTests\YafmsDbUtilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\IQ2\IQ2\IQ2_x64\IQ2_x64.csproj">
+      <Project>{6cbce0db-257c-465a-a9fc-496b61c219f0}</Project>
+      <Name>IQ2_x64</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Run\Run\Run64\Run64.csproj">
+      <Project>{b0a313f0-e090-42f7-b9e2-e8764528685e}</Project>
+      <Name>Run64</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy $(TargetName).* "$(ProjectDir)..\..\..\X86 GetPeaksLite\X64\Release\" /D /Y /F
+xcopy IQ2_x64.* "$(ProjectDir)..\..\..\X86 GetPeaksLite\X64\Release\" /D /Y /F</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
