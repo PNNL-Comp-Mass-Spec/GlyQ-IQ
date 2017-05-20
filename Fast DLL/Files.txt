@@ -1,0 +1,113 @@
+ Directory of Fast DLL
+05/11/2016  10:57 PM    <DIR>          X64 PNNLOmics
+05/11/2016  10:57 PM    <DIR>          X64 Protein File Reader
+05/11/2016  10:57 PM    <DIR>          X64 ProteinCalc
+05/11/2016  10:57 PM    <DIR>          X86 GetPeaksDLL
+05/11/2016  10:57 PM    <DIR>          X86 PNNL OMICS 1066 SYNC
+
+ Directory of Fast DLL\X64 PNNLOmics
+05/11/2016  10:57 PM    <DIR>          de
+05/11/2016  10:57 PM    <DIR>          es
+05/11/2016  10:57 PM    <DIR>          fr
+09/20/2011  04:33 PM            34,304 Mapack.dll
+09/20/2011  04:33 PM           270,848 MathNet.Iridium.dll
+09/20/2011  04:33 PM           177,152 PNNLOmics.dll
+09/20/2011  04:33 PM         1,102,336 System.Data.SQLite.dll
+09/20/2011  04:33 PM            49,152 UIMFLibrary.dll
+09/20/2011  04:33 PM           421,376 PNNLOmics.pdb
+09/20/2011  04:33 PM            53,999 PNNLOmicsElementData2.xml
+
+ Directory of Fast DLL\X64 PNNLOmics\de
+09/20/2011  04:33 PM             4,608 MathNet.Iridium.resources.dll
+
+ Directory of Fast DLL\X64 PNNLOmics\es
+09/20/2011  04:33 PM             4,608 MathNet.Iridium.resources.dll
+
+ Directory of Fast DLL\X64 PNNLOmics\fr
+09/20/2011  04:33 PM             4,608 MathNet.Iridium.resources.dll
+
+ Directory of Fast DLL\X64 Protein File Reader
+09/20/2011  04:33 PM            16,896 ProteinFileReader.dll
+09/20/2011  04:33 PM            40,448 ProteinFileReader.pdb
+09/20/2011  04:33 PM               125 ProteinFileReader.xml
+
+ Directory of Fast DLL\X64 ProteinCalc
+09/20/2011  04:33 PM            19,456 ProteinCalc.dll
+09/20/2011  04:33 PM            99,840 ProteinCalc.pdb
+
+ Directory of Fast DLL\X86 GetPeaksDLL
+05/11/2016  10:57 PM    <DIR>          X86 GetPeaksDLL
+
+ Directory of Fast DLL\X86 GetPeaksDLL\X86 GetPeaksDLL
+05/11/2016  10:57 PM    <DIR>          de
+05/11/2016  10:57 PM    <DIR>          es
+05/11/2016  10:57 PM    <DIR>          fr
+09/20/2011  04:33 PM            45,056 agtsampleinforw.dll
+09/20/2011  04:33 PM           299,008 BaseCommon.dll
+09/20/2011  04:33 PM           622,592 BaseDataAccess.dll
+09/20/2011  04:33 PM             9,728 BaseError.dll
+09/20/2011  04:33 PM           360,448 BaseTof.dll
+09/20/2011  04:33 PM            12,800 BrukerDataReader.dll
+09/20/2011  04:33 PM         1,196,032 DeconEngine.dll
+09/20/2011  04:33 PM         1,282,048 DeconEngineV2.dll
+09/20/2011  04:33 PM           436,736 DeconTools.Backend.dll
+09/20/2011  04:33 PM           193,536 GetPeaks DLL.dll
+09/20/2011  04:33 PM            15,840 IMSCOMP.dll
+09/20/2011  04:33 PM            57,344 Interop.XRAWFILE2Lib.dll
+09/20/2011  04:33 PM           663,552 libalglib.dll
+09/20/2011  04:33 PM            36,864 MassSpecDataReader.dll
+09/20/2011  04:33 PM           270,848 MathNet.Iridium.dll
+09/20/2011  04:33 PM             4,608 MemoryOverloadProfilierX86.dll
+09/20/2011  04:33 PM            61,440 MSDBLibrary.dll
+09/20/2011  04:33 PM           897,024 MultiAlignEngine.dll
+09/20/2011  04:33 PM           126,976 nunit.framework.dll
+09/20/2011  04:33 PM           150,528 PNNLOmics.dll
+09/20/2011  04:33 PM            21,504 ProteinCalc.dll
+09/20/2011  04:33 PM           904,704 System.Data.SQLite.dll
+09/20/2011  04:33 PM            90,112 UIMFLibrary.dll
+09/20/2011  04:33 PM         2,367,488 xerces-c_2_7.dll
+09/20/2011  04:33 PM         3,338,366 xerces-c_2_7D.dll
+09/20/2011  04:33 PM            45,056 YafmsLibrary.dll
+09/20/2011  04:33 PM            34,304 BrukerDataReader.pdb
+09/20/2011  04:33 PM         1,291,776 DeconTools.Backend.pdb
+09/20/2011  04:33 PM           347,648 GetPeaks DLL.pdb
+09/20/2011  04:33 PM            11,776 MemoryOverloadProfilierX86.pdb
+09/20/2011  04:33 PM         4,992,000 MultiAlignEngine.pdb
+09/20/2011  04:33 PM           370,176 PNNLOmics.pdb
+09/20/2011  04:33 PM           134,656 ProteinCalc.pdb
+09/20/2011  04:33 PM           198,144 UIMFLibrary.pdb
+09/20/2011  04:33 PM            56,832 YafmsLibrary.pdb
+09/20/2011  04:33 PM            53,999 PNNLOmicsElementData2.xml
+09/20/2011  04:33 PM             7,168 schema.yafms
+
+ Directory of Fast DLL\X86 GetPeaksDLL\X86 GetPeaksDLL\de
+09/20/2011  04:33 PM             4,608 MathNet.Iridium.resources.dll
+
+ Directory of Fast DLL\X86 GetPeaksDLL\X86 GetPeaksDLL\es
+09/20/2011  04:33 PM             4,608 MathNet.Iridium.resources.dll
+
+ Directory of Fast DLL\X86 GetPeaksDLL\X86 GetPeaksDLL\fr
+09/20/2011  04:33 PM             4,608 MathNet.Iridium.resources.dll
+
+ Directory of Fast DLL\X86 PNNL OMICS 1066 SYNC
+05/11/2016  10:57 PM    <DIR>          de
+05/11/2016  10:57 PM    <DIR>          es
+05/11/2016  10:57 PM    <DIR>          fr
+09/20/2011  04:33 PM                16 SyncToy_35eb369c-d572-4504-bcc0-c66e50ee46e1.dat
+09/20/2011  04:33 PM            34,304 Mapack.dll
+09/20/2011  04:33 PM           270,848 MathNet.Iridium.dll
+09/20/2011  04:33 PM           138,752 PNNLOmics.dll
+09/20/2011  04:33 PM           904,704 System.Data.SQLite.dll
+09/20/2011  04:33 PM            49,152 UIMFLibrary.dll
+09/20/2011  04:33 PM           349,696 PNNLOmics.pdb
+09/20/2011  04:33 PM               492 Mapack.dll.VisualState.xml
+09/20/2011  04:33 PM            53,999 PNNLOmicsElementData2.xml
+
+ Directory of Fast DLL\X86 PNNL OMICS 1066 SYNC\de
+09/20/2011  04:33 PM             4,608 MathNet.Iridium.resources.dll
+
+ Directory of Fast DLL\X86 PNNL OMICS 1066 SYNC\es
+09/20/2011  04:33 PM             4,608 MathNet.Iridium.resources.dll
+
+ Directory of Fast DLL\X86 PNNL OMICS 1066 SYNC\fr
+09/20/2011  04:33 PM             4,608 MathNet.Iridium.resources.dll

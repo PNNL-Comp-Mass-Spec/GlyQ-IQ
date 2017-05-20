@@ -1,1 +1,107 @@
-zAzure
+/zAzure
+/HammerOrDeconSimplePeakDetector/Lib/*.dll
+/HammerOrDeconSimplePeakDetector/Lib/*.pdb
+
+/X86 3D FeatureFinding
+!/X86 DeconTools Net 4/x86/Release
+!/X86 DeconToolsWorkflows/x86/Release
+/X86 DivideTargetsLibrary
+/X86 GetPeaksDLL
+/X86 GetPeaksLite
+/X86 GlycolyzerEngineConsole
+/X86 GlycolyzerGUI
+/X86 GlycolyzerGUImvvm
+/X86 HammerPeakDetector
+/X86 HPC DLL
+/X86 HPC DLL 2012
+/X86 HPC_Connector_Submit
+/X86 IQ
+/X86 IQ2
+/X86 IQGlyQ
+/X86 Microsoft
+/X86 NHibernate
+/X86 NUnit Framework
+/X86 OmniFinder/*.dll
+/X86 OmniFinder/*.xml
+/X86 OmniFinder/de
+/X86 OmniFinder/es
+/X86 OmniFinder/fr
+!X86 OmniFinder/OmniFinder.dll
+/X86 OrbitrapPeakDetection
+X86 Run
+/X86 TextToMass/Release/*.dll
+/X86 TextToMass/Release/de
+/X86 TextToMass/Release/es
+/X86 TextToMass/Release/fr
+!/X86 TextToMass/Release/GlycanTextToMass.dll
+/X86 Thermo
+/X86 UIMF Library
+/FastDLL/X86*
+/Fast DLL/X86*
+/Fast DLL/X64*
+GetPeaks2old
+GetPeaks/GetPeaks 4.0/System.Data.SQLite.dll
+GetPeaks/GetPeaks DLL/IMSCOMP.dll
+GetPeaks/GetPeaks DLL/Interop.XRAWFILE2Lib.dll
+GetPeaks/GetPeaks DLL/System.Data.SQLite.dll
+GetPeaks/GetPeaks DLL/xerces-c_2_7.dll
+GetPeaks/GetPeaks DLL/xerces-c_2_7D.dll
+GetPeaks/GetPeaks.UnitTests/BaseCommon.dll
+GetPeaks/GetPeaks.UnitTests/BaseDataAccess.dll
+GetPeaks/GetPeaks.UnitTests/BaseError.dll
+GetPeaks/GetPeaks.UnitTests/BaseTof.dll
+GetPeaks/GetPeaks.UnitTests/IMSCOMP.dll
+GetPeaks/GetPeaks.UnitTests/libalglib.dll
+GetPeaks/GetPeaks.UnitTests/MassSpecDataReader.dll
+GetPeaks/GetPeaks/IMSCOMP.dll
+GetPeaks/GetPeaks/System.Data.SQLite.dll
+GetPeaks/IQGlyQ_Console/MSFileReader.XRawfile2.dll
+GetPeaks/Parallel/System.Data.SQLite.dll
+GetPeaks2/IQGlyQ_Console/MSFileReader.XRawfile2.dll
+/GlyQ-IQ_Sipper/Library
+GenericComparer/LoaderProgram X86 2010/LoadProgram X86/LoadProgram X86/IMSCOMP.dll
+GlyQ-IQ_Sipper/packages
+GlyQ-IQ_Sipper/SipperLaunch/Release*
+/GlyQIQViewer/Library
+/GlyQIQViewer/packages
+HPC_JobCreator/HPC_JobCreator/RegisterDLL/MSFileReader.XRawfile2.dll
+/LoaderClassLibrary1DLL/MathNet DLL/MathNet.Iridium.dll
+MSMS/MSMS DLL/IMSCOMP.dll
+MSMS/MSMS DLL/System.Data.SQLite.dll
+MSMS/MSMS DLL/xerces-c_2_7.dll
+MSMS/MSMS DLL/xerces-c_2_7D.dll
+NoiseFinder2/NoiseFinder/MyFirstDLL/xerces-c_2_7.dll
+NoiseFinder2/NoiseFinder/MyFirstDLL/xerces-c_2_7D.dll
+OrbitrapPeakDetector/OrbitrapPeakThresholder/Deisotoping/xerces-c_2_7.dll
+OrbitrapPeakDetector/OrbitrapPeakThresholder/Deisotoping/xerces-c_2_7D.dll
+/PeakDetector/Copy of DLLS
+/PeakDetector/PeakDetector/xerces-c_2_7D.dll
+/PeakDetector/PeakDetector/IMSCOMP.dll
+/PeakDetector/PeakDetector/xerces-c_2_7.dll
+/Synthetic Spectra Console/Synthetic Spectra Console/IMSCOMP.dll
+Synthetic Spectra DLL X64 Net 4/Synthetic Spectra Console/Synthetic Spectra Console/IMSCOMP.dll
+Synthetic Spectra DLL X64 Net 4/Synthetic Spectra DLL X64 Net 4/IMSCOMP.dll
+/ToPIC
+/ToGlycoGrid
+X64 OmniFinder/de/MathNet.Iridium.resources.dll
+X64 OmniFinder/es/MathNet.Iridium.resources.dll
+X64 OmniFinder/fr/MathNet.Iridium.resources.dll
+X64 OmniFinder/MathNet.Iridium.dll
+X64 OmniFinder/PNNLOmics.dll
+!/X86 UIMF Library/x64/Release
+!/X86 UIMF Library/x86/Release
+X86 YAFMS Library/IMSCOMP.dll
+X86 YAFMSDB/ACPU/nunit.framework.dll
+X86 YAFMSDB/ACPU/System.Data.SQLite.dll
+X86 YAFMSDB/ACPU/YAFMS-DB-ACPU.dll.config
+X86 YAFMSDB/X64/nunit.framework.dll
+X86 YAFMSDB/X64/System.Data.SQLite.DLL
+X86 YAFMSDB/X86/nunit.framework.dll
+X86 YAFMSDB/X86/System.Data.SQLite.dll
+X86 YAFMSDB/X86/YAFMS-DB-X86.dll.config
+YAFMSConverter_Source_Code/Library/Interop.XRAWFILE2Lib.dll
+YAFMSConverter_Source_Code/raw2yafms DLL/IMSCOMP.dll
+YAFMSConverter_Source_Code/raw2yafms/IMSCOMP.dll
+YAFMSConverter_Source_Code/raw2yafms/Interop.XRAWFILE2Lib.dll
+YAFMSConverter_Source_Code/raw2yafms/XRawfile2.dll
+YAFMS-DB/YAFMS-DB/X86 Working/YAFMS-DB-X86/YAFMS-DB-X86/System.Data.SQLite.dll
