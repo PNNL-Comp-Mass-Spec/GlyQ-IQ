@@ -1,0 +1,8 @@
+Title, ESI42467CentroidPeaks_G, Title of file
+FileName, ESI42467CentroidPeaks_G.txt, file name
+InfoFileName, ESI42467CentroidPeaks_G Info.txt, file name of information file
+Date, 2012_02_01, data file was created
+Adduct, H+, Adduct on masses (Neutral, H+, HX+, Na+, H+Na+)
+Type, N-Glycan, what type of molecules (Glycans, Peptides, Glycopepties)
+Source, Theory, (Experimental) non-perfcet list or (Theory) Exact Mass List
+AccuracyOfList, 1, upper mass accuracty of list in PPM
