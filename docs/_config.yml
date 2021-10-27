@@ -2,3 +2,6 @@
 name: GlyQ-IQ
 description: GlyQ-IQ is software that performs a targeted, chromatographic centric search of mass spectral data for glycans.
 url: https://pnnl-comp-mass-spec.github.io/GlyQ-IQ/
+
+# Google Analytics
+google_analytics: G-LXXKP1N66C
